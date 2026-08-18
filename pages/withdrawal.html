@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>الانسحاب من مقرر</title>
+
+    <link rel="stylesheet" href="../css/withdrawal.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= TOP BAR ================= -->
+
+    <header class="top-bar">
+
+        <div class="top-right">
+
+            <img src="../images/profile.jpg" class="top-profile">
+
+            <button class="top-btn logout-btn" title="تسجيل الخروج">
+                <i class="fa-solid fa-power-off"></i>
+            </button>
+
+            <button class="top-btn">
+                <i class="fa-solid fa-key"></i>
+            </button>
+
+            <button class="top-btn">
+                <i class="fa-solid fa-gear"></i>
+            </button>
+
+            <span class="language">En</span>
+
+        </div>
+
+        <div class="date" id="currentDate"></div>
+
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+    </header>
+
+
+    <!-- ================= SIDE BAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <img src="../images/profile.jpg" alt="May University">
+        </div>
+
+        <div class="student-info">
+
+            <img src="../images/profile.jpg" class="student-photo">
+
+            <h3>أحمد محمد</h3>
+
+            <p>جامعة مايو</p>
+            <p>هندسة الحاسب</p>
+
+        </div>
+
+
+        <nav class="side-menu">
+
+            <a href="profile.html">
+                <i class="fa-regular fa-address-card"></i>
+                البيانات الشخصية
+            </a>
+
+            <a href="results.html">
+                <i class="fa-solid fa-chart-column"></i>
+                النتائج الدراسية
+            </a>
+
+            <a href="registration.html">
+                <i class="fa-solid fa-user-pen"></i>
+                التسجيل الأكاديمي
+            </a>
+
+            <a href="military.html">
+                <i class="fa-solid fa-user-shield"></i>
+                التربية العسكرية
+            </a>
+
+            <a href="cards.html">
+                <i class="fa-solid fa-id-card"></i>
+                البطاقات التعريفية
+            </a>
+
+            <a href="complaints.html">
+                <i class="fa-regular fa-circle-question"></i>
+                استبيان
+            </a>
+
+            <a href="mailbox.html">
+                <i class="fa-regular fa-envelope"></i>
+                صندوق البريد
+            </a>
+
+            <a href="registration-form.html">
+                <i class="fa-regular fa-rectangle-list"></i>
+                استمارة التسجيل
+            </a>
+
+            <a href="complaints.html">
+                <i class="fa-solid fa-scale-balanced"></i>
+                تظلمات
+            </a>
+
+            <a href="withdrawal.html" class="active">
+                <i class="fa-regular fa-file-lines"></i>
+                الانسحاب من مقرر
+            </a>
+
+            <a href="fees.html">
+                <i class="fa-solid fa-money-bill"></i>
+                الرسوم
+            </a>
+
+            <a href="courses.html">
+                <i class="fa-solid fa-book-open"></i>
+                مقرراتي
+            </a>
+
+            <a href="attendance.html">
+                
+                <i class="fa-regular fa-calendar-check"></i>
+                الحضور والغياب
+            </a>
+
+            <a href="schedule.html">
+                
+                <i class="fa-regular fa-calendar"></i>
+                الجداول
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+        <div class="page-title">
+            الانسحاب من مقرر
+        </div>
+
+
+        <!-- COURSE TABLE -->
+
+        <section class="card">
+
+            <div class="card-title">
+                <i class="fa-solid fa-book"></i>
+                المقررات المسجلة
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>الكود</th>
+                            <th>المقرر</th>
+                            <th>الساعات المعتمدة</th>
+                            <th>الحالة</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>CPE612</td>
+                            <td>Database Management Systems 2 </td>
+                            <td>3</td>
+                            <td>
+                                <span class="status">مسجل</span>
+                            </td>
+                        </tr>
+
+                        
+
+                        
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- WITHDRAW FORM -->
+
+        <section class="card withdrawal-card">
+
+            <div class="card-title">
+                <i class="fa-solid fa-file-circle-minus"></i>
+                طلب الانسحاب من مقرر
+            </div>
+
+
+            <div class="notice">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+
+                <span>
+                    برجاء التأكد من المقرر المراد الانسحاب منه قبل تقديم الطلب.
+                </span>
+            </div>
+
+
+            <form id="withdrawalForm">
+
+                <div class="form-group">
+
+                    <label for="course">
+                        المقرر
+                    </label>
+
+                    <select id="course" required>
+
+                        <option value="">
+                            -- اختر المقرر --
+                        </option>
+
+                        <option value="CSE112">
+                            Database Management Systems  2 - CPE612
+                        </option>
+
+                        
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="reason">
+                        سبب الانسحاب
+                    </label>
+
+                    <textarea
+                        id="reason"
+                        rows="5"
+                        placeholder="اكتب سبب الانسحاب من المقرر..."
+                        required></textarea>
+
+                </div>
+
+
+                <div class="confirm-box">
+
+                    <label>
+
+                        <input type="checkbox" id="confirm" required>
+
+                        أقر بأنني أتحمل مسؤولية تقديم طلب الانسحاب من المقرر
+                        وأوافق على الإجراءات الخاصة بالجامعة.
+
+                    </label>
+
+                </div>
+
+
+                <button type="submit" class="submit-btn">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                    تقديم طلب الانسحاب
+
+                </button>
+
+            </form>
+
+
+            <!-- SUCCESS MESSAGE -->
+
+            <div id="successMessage" class="success-message">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <div>
+                    <strong>تم تقديم طلب الانسحاب بنجاح</strong>
+                    <p>
+                        سيتم مراجعة الطلب من الإدارة المختصة.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- REQUEST STATUS -->
+
+        <section class="card">
+
+            <div class="card-title">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                حالة طلب الانسحاب
+            </div>
+
+            <div class="empty-status" id="emptyStatus">
+
+                <i class="fa-regular fa-folder-open"></i>
+
+                <p>
+                    لا توجد طلبات انسحاب مقدمة حتى الآن.
+                </p>
+
+            </div>
+
+            <div class="request-status" id="requestStatus">
+
+                <div>
+                    <span>المقرر</span>
+                    <strong id="selectedCourse"></strong>
+                </div>
+
+                <div>
+                    <span>حالة الطلب</span>
+                    <strong class="pending">
+                        قيد المراجعة
+                    </strong>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        <span>
+            © سياسة خصوصية وتأمين البيانات
+        </span>
+    </footer>
+
+
+    <script src="../js/withdrawal.js"></script>
+
+</body>
+
+</html>

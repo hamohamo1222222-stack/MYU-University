@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My courses</title>
+
+    <link rel="stylesheet" href="../css/platform.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         TOP BAR
+    ========================== -->
+
+    <div class="top-bar">
+
+        <div class="top-icons">
+
+            <div class="notification">
+                <i class="fa-regular fa-bell"></i>
+                <span>5</span>
+            </div>
+
+            <i class="fa-regular fa-message"></i>
+
+            <div class="account">
+
+                <div class="account-circle">
+                    أم
+                </div>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <!-- Logo -->
+
+            <a href="home.html" class="platform-logo">
+
+                <img src="../images/my.jpg" alt="May University">
+
+            </a>
+
+
+            <!-- Navigation -->
+
+            <div class="navigation">
+
+                <a href="home.html">
+                    Home
+                </a>
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="platform.html" class="active">
+                    My courses
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="platform-main">
+
+        <h1>
+            My courses
+        </h1>
+
+
+        <section class="courses-panel">
+
+            <div class="panel-title">
+                Course overview
+            </div>
+
+
+            <!-- Filters -->
+
+            <div class="course-controls">
+
+                <button class="select-button">
+                    All
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+
+
+                <input
+                    type="text"
+                    id="courseSearch"
+                    placeholder="Search">
+
+
+                <button class="select-button">
+
+                    Sort by course name
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </button>
+
+
+                <button class="select-button">
+
+                    Card
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- Courses -->
+
+            <div class="courses-grid" id="coursesGrid">
+
+
+                <!-- DATABASE -->
+
+                <article class="course-card">
+
+                    <div class="course-image database-bg"></div>
+
+                    <div class="course-body">
+
+                        <a href="database.html" class="course-name">
+
+                            Database Management 2
+                            Systems_CSE11212_44_252
+
+                        </a>
+
+                        <div class="semester">
+                            الأول
+                        </div>
+
+                    </div>
+
+
+                    <button class="course-menu">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Help -->
+
+    <button class="help-button">
+        ?
+    </button>
+
+
+    <script src="../js/platform.js"></script>
+
+</body>
+
+</html>

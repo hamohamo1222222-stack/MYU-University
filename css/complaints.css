@@ -1,0 +1,538 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+
+    background: #f7f7f7;
+
+    color: #555;
+
+    direction: rtl;
+}
+
+
+/* ================= TOP BAR ================= */
+
+.top-bar {
+    height: 37px;
+
+    background: #555658;
+
+    color: white;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    align-items: center;
+}
+
+.top-right {
+    position: absolute;
+
+    left: 10px;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    direction: ltr;
+}
+
+.small-profile {
+    width: 29px;
+    height: 29px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 1px solid #777;
+}
+
+.top-right i {
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.top-right i:hover {
+    color: #ff777b;
+}
+
+.english {
+    font-size: 18px;
+
+    font-family: Georgia, serif;
+}
+
+.date {
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 9px;
+
+    font-weight: bold;
+}
+
+.menu-icon {
+    position: absolute;
+
+    right: 125px;
+
+    font-size: 16px;
+}
+
+
+/* ================= UNIVERSITY LOGO ================= */
+
+.university-logo {
+    position: absolute;
+
+    right: 0;
+    top: 0;
+
+    width: 125px;
+
+    height: 37px;
+
+    background: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.university-logo img {
+    width: 95px;
+    height: 34px;
+
+    object-fit: contain;
+}
+
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+    position: fixed;
+
+    top: 37px;
+    right: 0;
+    bottom: 25px;
+
+    width: 125px;
+
+    background: #57585a;
+
+    color: white;
+
+    z-index: 900;
+
+    overflow-y: auto;
+}
+
+.student-profile {
+    text-align: center;
+
+    padding: 8px 5px 10px;
+
+    border-bottom: 1px solid #666;
+}
+
+.student-profile img {
+    width: 78px;
+    height: 78px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 2px solid #ddd;
+}
+
+.student-profile h3 {
+    margin: 4px 0;
+
+    color: #ff6f72;
+
+    font-size: 12px;
+}
+
+.student-profile p {
+    margin: 3px 0;
+
+    font-size: 9px;
+
+    color: #ff777b;
+}
+
+
+/* ================= SIDE MENU ================= */
+
+.side-menu {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.side-menu a {
+    height: 29px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    gap: 7px;
+
+    padding: 0 8px;
+
+    color: #eee;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    border-bottom: 1px solid rgba(255,255,255,.05);
+
+    transition: .2s;
+}
+
+.side-menu a i {
+    width: 14px;
+
+    text-align: center;
+}
+
+.side-menu a:hover {
+    background: #687776;
+}
+
+.side-menu a.active {
+    background: #7e918a;
+
+    color: white;
+}
+
+
+/* ================= MAIN ================= */
+
+.main-content {
+    margin-right: 125px;
+
+    padding: 55px 12px 70px;
+
+    min-height: calc(100vh - 37px);
+
+    direction: rtl;
+}
+
+.page-title {
+    margin: 0 8px 15px;
+
+    font-size: 18px;
+
+    font-weight: 400;
+
+    color: #444;
+
+    text-decoration: underline;
+}
+
+
+/* ================= NOTICE ================= */
+
+.notice {
+    height: 38px;
+
+    background: #f8d7da;
+
+    border: 1px solid #f1bfc4;
+
+    color: #8a4248;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    font-size: 11px;
+
+    margin-bottom: 10px;
+}
+
+
+/* ================= BOX ================= */
+
+.complaints-box,
+.form-box {
+    background: white;
+
+    border: 1px solid #d7d7d7;
+
+    margin-bottom: 15px;
+}
+
+.box-header {
+    height: 39px;
+
+    background: #ddd;
+
+    border-bottom: 1px solid #c8c8c8;
+
+    padding: 0 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    color: #555;
+
+    font-size: 12px;
+}
+
+
+/* ================= BUTTON ================= */
+
+#newComplaintBtn {
+    border: none;
+
+    background: #69767d;
+
+    color: white;
+
+    padding: 7px 16px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 11px;
+}
+
+#newComplaintBtn:hover {
+    background: #59656b;
+}
+
+
+/* ================= TABLE ================= */
+
+.table-container {
+    padding: 10px 12px 40px;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-size: 11px;
+}
+
+th {
+    background: #d8dadd;
+
+    color: #555;
+
+    font-weight: bold;
+
+    height: 30px;
+
+    border: 1px solid #c7c9cb;
+}
+
+td {
+    height: 32px;
+
+    text-align: center;
+
+    border-bottom: 1px solid #ddd;
+
+    color: #555;
+}
+
+.empty-row td {
+    height: 130px;
+
+    color: #888;
+}
+
+.empty-row i {
+    display: block;
+
+    font-size: 25px;
+
+    margin-bottom: 8px;
+
+    color: #aaa;
+}
+
+
+/* ================= FORM ================= */
+
+.form-box {
+    display: none;
+}
+
+.form-content {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 11px;
+
+    color: #555;
+}
+
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    border: 1px solid #ccc;
+
+    background: white;
+
+    padding: 9px;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    outline: none;
+}
+
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #84958e;
+}
+
+.form-group textarea {
+    min-height: 100px;
+
+    resize: vertical;
+}
+
+
+/* ================= FORM BUTTONS ================= */
+
+.form-buttons {
+    display: flex;
+
+    gap: 8px;
+}
+
+.save-btn,
+.cancel-btn {
+    border: none;
+
+    padding: 8px 18px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 11px;
+}
+
+.save-btn {
+    background: #7d9189;
+
+    color: white;
+}
+
+.save-btn:hover {
+    background: #687c75;
+}
+
+.cancel-btn {
+    background: #ddd;
+
+    color: #555;
+}
+
+.cancel-btn:hover {
+    background: #ccc;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    position: fixed;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    height: 25px;
+
+    background: #555658;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 8px;
+
+    z-index: 1000;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 800px) {
+
+    .sidebar {
+        width: 110px;
+    }
+
+    .main-content {
+        margin-right: 110px;
+    }
+
+    .university-logo {
+        width: 110px;
+    }
+
+    .side-menu a {
+        font-size: 9px;
+    }
+}

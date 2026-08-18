@@ -1,0 +1,178 @@
+/* =========================
+   COURSES PAGE
+========================= */
+
+.courses-content {
+
+    margin-right: 125px;
+
+    padding: 48px 12px 50px;
+
+    min-height: calc(100vh - 60px);
+
+    background: #f8f8f8;
+}
+
+
+/* =========================
+   PAGE TITLE
+========================= */
+
+.courses-content .page-title {
+
+    font-size: 16px;
+
+    font-weight: normal;
+
+    color: #555;
+
+    margin: 0 0 12px;
+
+    text-align: right;
+}
+
+
+/* =========================
+   PLATFORM BOX
+========================= */
+
+.platform-box {
+
+    width: 100%;
+
+    min-height: 70px;
+
+    background: #fff;
+
+    border: 1px solid #ddd;
+
+    border-radius: 3px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* =========================
+   PLATFORM BUTTON
+========================= */
+
+.platform-button {
+
+    width: 260px;
+
+    height: 38px;
+
+    border: 1px solid #00a6d6;
+
+    background: #fff;
+
+    color: #009bc7;
+
+    text-decoration: none;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+
+.platform-button:hover {
+
+    background: #00a6d6;
+
+    color: #fff;
+
+}
+
+
+/* =========================
+   SUB MENU
+========================= */
+
+.menu-group {
+
+    width: 100%;
+}
+
+
+.menu-group > a {
+
+    position: relative;
+}
+
+
+/* =========================
+   ACTIVE SUBMENU
+========================= */
+
+.submenu {
+
+    background: #555;
+
+    width: 100%;
+
+    display: block;
+}
+
+
+.submenu a {
+
+    display: block;
+
+    height: 32px;
+
+    line-height: 32px;
+
+    padding-right: 28px;
+
+    color: #eee;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    transition: 0.2s;
+}
+
+
+.submenu a:hover {
+
+    background: #777;
+
+}
+
+
+/* الصفحة الحالية */
+
+.submenu .submenu-active {
+
+    background: #80958d;
+
+    color: #fff;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .courses-content {
+
+        margin-right: 110px;
+
+    }
+
+}

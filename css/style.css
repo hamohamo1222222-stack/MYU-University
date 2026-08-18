@@ -1,0 +1,355 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+
+    background: #f7f7f7;
+
+    color: #555;
+}
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar {
+    height: 36px;
+
+    width: 100%;
+
+    background: #555;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+    direction: ltr;
+}
+
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.top-left {
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding-left: 12px;
+}
+
+
+/* الصورة الشخصية */
+
+.profile-image {
+    width: 27px;
+    height: 27px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   TOP ICONS
+========================= */
+
+.top-icon {
+    border: none;
+
+    background: transparent;
+
+    color: #eee;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    padding: 0;
+
+    width: 18px;
+    height: 25px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.2s;
+}
+
+.top-icon:hover {
+    color: #ff7075;
+
+    transform: scale(1.1);
+}
+
+
+/* زر تسجيل الخروج */
+
+.logout-btn:hover {
+    color: #ff5d63;
+}
+
+
+/* =========================
+   ENGLISH
+========================= */
+
+.english-link {
+    color: white;
+
+    text-decoration: none;
+
+    font-family: Georgia, serif;
+
+    font-size: 16px;
+
+    margin-left: 1px;
+}
+
+.english-link:hover {
+    color: #ff7075;
+}
+
+
+/* =========================
+   DATE
+========================= */
+
+.date {
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: white;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   UNIVERSITY LOGO
+========================= */
+
+.top-logo {
+    position: absolute;
+
+    right: 0;
+    top: 0;
+
+    height: 36px;
+
+    width: 151px;
+
+    background: #eee;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.top-logo img {
+    max-width: 125px;
+
+    max-height: 34px;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services-container {
+    width: 100%;
+
+    max-width: 1220px;
+
+    margin: 23px auto 0;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 3px;
+
+    direction: rtl;
+}
+
+
+/* =========================
+   SERVICE CARD
+========================= */
+
+.service-card {
+    width: 154px;
+
+    height: 77px;
+
+    background: #dedede;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-decoration: none;
+
+    color: #555;
+
+    transition:
+        background 0.2s,
+        transform 0.2s;
+
+    direction: rtl;
+}
+
+
+/* الأيقونة */
+
+.service-card i {
+    font-size: 30px;
+
+    color: #ff6f73;
+
+    margin-bottom: 7px;
+}
+
+
+/* النص */
+
+.service-card span {
+    font-size: 11px;
+
+    color: #555;
+}
+
+
+/* Hover */
+
+.service-card:hover {
+    background: #d4d4d4;
+
+    transform: translateY(-1px);
+}
+
+.service-card:hover i {
+    color: #ff5e64;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    position: fixed;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    height: 24px;
+
+    background: #555;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: white;
+
+    font-size: 8px;
+
+    gap: 3px;
+}
+
+footer span {
+    font-size: 8px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .services-container {
+        padding: 0 10px;
+    }
+
+    .service-card {
+        width: 145px;
+    }
+
+    .date {
+        display: none;
+    }
+
+    .top-logo {
+        width: 120px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .top-left {
+        gap: 10px;
+    }
+
+    .profile-image {
+        width: 25px;
+        height: 25px;
+    }
+
+    .service-card {
+        width: 135px;
+    }
+}

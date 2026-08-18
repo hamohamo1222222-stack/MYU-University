@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>بوابة الخدمات الطلابية - جامعة مايو</title>
+
+    <!-- Font Awesome للأيقونات -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         TOP BAR
+    ========================== -->
+
+    <header class="topbar">
+
+        <!-- الجزء الشمال -->
+        <div class="top-left">
+
+            <!-- الصورة الشخصية -->
+            <img
+                src="images/profile.jpg"
+                alt="Profile"
+                class="profile-image"
+            >
+
+            <!-- تسجيل الخروج -->
+            <button
+                class="top-icon logout-btn"
+                id="logoutBtn"
+                title="تسجيل الخروج"
+            >
+                <i class="fa-solid fa-power-off"></i>
+            </button>
+
+            <!-- المفتاح -->
+            <button
+                class="top-icon"
+                title="تغيير كلمة المرور"
+            >
+                <i class="fa-solid fa-key"></i>
+            </button>
+
+            <!-- الإعدادات -->
+            <button
+                class="top-icon"
+                title="الإعدادات"
+            >
+                <i class="fa-solid fa-gears"></i>
+            </button>
+
+            <!-- English -->
+            <a href="#" class="english-link">En</a>
+
+        </div>
+
+
+        <!-- التاريخ -->
+       <div class="date" id="currentDate"></div>
+
+
+        <!-- اللوجو -->
+        <div class="top-logo">
+            <img src="images/MYU.PNG" alt="MYU">
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         SERVICES
+    ========================== -->
+
+    <main class="services-container">
+
+        <!-- 1 -->
+        <a href="pages/complaints.html" class="service-card">
+            <i class="fa-solid fa-scale-balanced"></i>
+            <span>تظلمات</span>
+        </a>
+
+        <!-- 2 -->
+        <a href="pages/registration-form.html" class="service-card">
+            <i class="fa-regular fa-newspaper"></i>
+            <span>استمارة التسجيل</span>
+        </a>
+
+        <!-- 3 -->
+        <a href="pages/mailbox.html" class="service-card">
+            <i class="fa-regular fa-envelope"></i>
+            <span>صندوق البريد</span>
+        </a>
+
+        <!-- 4 -->
+        <a href="pages/survey.html" class="service-card">
+            <i class="fa-regular fa-circle-question"></i>
+            <span>استبيان</span>
+        </a>
+
+        <!-- 5 -->
+        <a href="pages/cards.html" class="service-card">
+            <i class="fa-regular fa-id-card"></i>
+            <span>البطاقات التعريفية</span>
+        </a>
+
+        <!-- 6 -->
+        <a href="pages/military.html" class="service-card">
+            <i class="fa-solid fa-user-shield"></i>
+            <span>التربية العسكرية</span>
+        </a>
+
+        <!-- 7 -->
+        <a href="pages/registration.html" class="service-card">
+            <i class="fa-solid fa-file-signature"></i>
+            <span>التسجيل الأكاديمي</span>
+        </a>
+
+        <!-- 8 -->
+        <a href="pages/results.html" class="service-card">
+            <i class="fa-solid fa-list-check"></i>
+            <span>النتائج الدراسية</span>
+        </a>
+
+        <!-- 9 -->
+        <a href="pages/profile.html" class="service-card">
+            <i class="fa-regular fa-id-card"></i>
+            <span>البيانات الشخصية</span>
+        </a>
+
+        <!-- 10 -->
+        <a href="pages/withdrawal.html" class="service-card">
+            <i class="fa-regular fa-file-excel"></i>
+            <span>الانسحاب من مقرر</span>
+        </a>
+
+        <!-- 11 -->
+        <a href="pages/fees.html" class="service-card">
+            <i class="fa-solid fa-money-bill"></i>
+            <span>الرسوم</span>
+        </a>
+
+        <!-- 12 -->
+        <a href="pages/courses.html" class="service-card">
+            <i class="fa-solid fa-book-open"></i>
+            <span>مقرراتي</span>
+        </a>
+
+        <!-- 13 -->
+        <a href="pages/attendance.html" class="service-card">
+            <i class="fa-solid fa-clipboard-check"></i>
+            <span>الحضور والغياب</span>
+        </a>
+
+        <!-- 14 -->
+        <a href="pages/schedule.html" class="service-card">
+            <i class="fa-regular fa-calendar"></i>
+            <span>الجداول</span>
+        </a>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+        <span>⚙</span>
+        سياسة الخصوصية وتأمين البيانات
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

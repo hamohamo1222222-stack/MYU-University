@@ -1,0 +1,646 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    background: #f7f7f7;
+
+    color: #555;
+
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+
+    direction: rtl;
+}
+
+
+/* ================= TOP BAR ================= */
+
+.top-bar {
+    position: fixed;
+
+    top: 0;
+    right: 0;
+    left: 0;
+
+    height: 37px;
+
+    background: #555658;
+
+    color: white;
+
+    z-index: 1000;
+}
+
+.top-icons {
+    position: absolute;
+
+    left: 12px;
+    top: 0;
+
+    height: 37px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    direction: ltr;
+}
+
+.top-profile {
+    width: 29px;
+    height: 29px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+.top-btn {
+    border: 0;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.top-btn:hover {
+    color: #ff7075;
+}
+
+.language {
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+}
+
+.current-date {
+    position: absolute;
+
+    top: 13px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 9px;
+
+    font-weight: bold;
+}
+
+.menu-icon {
+    position: absolute;
+
+    right: 10px;
+    top: 10px;
+
+    font-size: 15px;
+}
+
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+    position: fixed;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 152px;
+
+    background: #59595b;
+
+    color: white;
+
+    z-index: 900;
+
+    overflow-y: auto;
+}
+
+.sidebar-logo {
+    width: 100%;
+
+    height: 37px;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.sidebar-logo img {
+    width: 112px;
+
+    height: 34px;
+
+    object-fit: contain;
+}
+
+
+/* STUDENT */
+
+.student-info {
+    text-align: center;
+
+    padding: 9px 5px 11px;
+
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.student-photo {
+    width: 76px;
+    height: 76px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 2px solid #ddd;
+}
+
+.student-info h3 {
+    margin: 5px 0 2px;
+
+    color: #ff6d72;
+
+    font-size: 12px;
+}
+
+.student-info p {
+    margin: 2px 0;
+
+    color: #ff777b;
+
+    font-size: 8px;
+}
+
+
+/* MENU */
+
+.side-menu {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.side-menu a {
+    min-height: 30px;
+
+    padding: 0 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #eee;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    border-bottom: 1px solid rgba(255,255,255,.05);
+
+    transition: background .2s;
+}
+
+.side-menu a i {
+    width: 16px;
+
+    text-align: center;
+
+    font-size: 11px;
+}
+
+.side-menu a:hover {
+    background: #71827d;
+}
+
+.side-menu a.active {
+    background: #81968e;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+
+/* ================= MAIN ================= */
+
+.main-content {
+    margin-right: 152px;
+
+    padding: 52px 14px 60px;
+
+    min-height: 100vh;
+}
+
+.page-title {
+    margin: 0 7px 15px;
+
+    color: #444;
+
+    font-size: 18px;
+
+    font-weight: 400;
+
+    text-decoration: underline;
+}
+
+
+/* ================= CARD ================= */
+
+.card {
+    background: white;
+
+    border: 1px solid #d9d9d9;
+
+    margin-bottom: 16px;
+
+    overflow: hidden;
+}
+
+.card-title {
+    min-height: 37px;
+
+    padding: 8px 13px;
+
+    background: #ddd;
+
+    border-bottom: 1px solid #c9c9c9;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    color: #555;
+
+    font-size: 12px;
+}
+
+.card-title i {
+    margin-left: 5px;
+
+    color: #ff7075;
+}
+
+
+/* ================= STUDENT DATA ================= */
+
+.student-data {
+    padding: 18px 25px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.student-data div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.student-data span {
+    color: #888;
+
+    font-size: 9px;
+}
+
+.student-data strong {
+    color: #555;
+
+    font-size: 11px;
+
+    font-weight: 500;
+}
+
+
+/* ================= SUMMARY ================= */
+
+.attendance-summary {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+
+    margin-bottom: 16px;
+}
+
+.summary-box {
+    min-height: 115px;
+
+    padding: 15px;
+
+    background: white;
+
+    border: 1px solid #d9d9d9;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    text-align: center;
+}
+
+.summary-box i {
+    color: #71877f;
+
+    font-size: 23px;
+}
+
+.summary-box span {
+    color: #777;
+
+    font-size: 10px;
+}
+
+.summary-box strong {
+    color: #555;
+
+    font-size: 20px;
+}
+
+.summary-box.absent i {
+    color: #b96c70;
+}
+
+.summary-box.percentage i {
+    color: #8b7c59;
+}
+
+
+/* ================= TABLE ================= */
+
+.table-container {
+    padding: 10px;
+
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    direction: rtl;
+
+    min-width: 850px;
+}
+
+th {
+    padding: 9px 7px;
+
+    background: #d9dcde;
+
+    border: 1px solid #c7cacc;
+
+    color: #555;
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+td {
+    padding: 10px 7px;
+
+    border: 1px solid #ddd;
+
+    color: #555;
+
+    font-size: 10px;
+
+    text-align: center;
+}
+
+tbody tr:hover td {
+    background: #fafafa;
+}
+
+
+/* ================= PROGRESS ================= */
+
+.progress-area {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    min-width: 115px;
+}
+
+.progress {
+    flex: 1;
+
+    height: 7px;
+
+    background: #e5e5e5;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+
+    border-radius: 5px;
+}
+
+.progress-bar.good {
+    background: #718b80;
+}
+
+
+/* ================= STATUS ================= */
+
+.status {
+    display: inline-block;
+
+    padding: 4px 10px;
+
+    border-radius: 2px;
+
+    font-size: 9px;
+}
+
+.good-status {
+    background: #e6efe9;
+
+    color: #587568;
+}
+
+
+/* ================= PRINT ================= */
+
+.print-btn {
+    border: 1px solid #bbb;
+
+    background: #f5f5f5;
+
+    color: #555;
+
+    padding: 5px 12px;
+
+    font-family: inherit;
+
+    font-size: 9px;
+
+    cursor: pointer;
+}
+
+.print-btn:hover {
+    background: #e7e7e7;
+}
+
+
+/* ================= NOTES ================= */
+
+.attendance-note {
+    padding: 15px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.attendance-note div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 10px 12px;
+
+    background: #f7f7f7;
+
+    border: 1px solid #e2e2e2;
+
+    font-size: 10px;
+}
+
+.attendance-note div:first-child i {
+    color: #6f8a7d;
+}
+
+.attendance-note div:last-child i {
+    color: #c28b4e;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    position: fixed;
+
+    bottom: 0;
+
+    right: 0;
+    left: 0;
+
+    height: 26px;
+
+    background: #555658;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 8px;
+
+    z-index: 1000;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 950px) {
+
+    .sidebar {
+        width: 125px;
+    }
+
+    .main-content {
+        margin-right: 125px;
+    }
+
+    .student-data {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .attendance-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .attendance-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .student-data {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ================= PRINT ================= */
+
+@media print {
+
+    .top-bar,
+    .sidebar,
+    footer,
+    .print-btn {
+        display: none !important;
+    }
+
+    .main-content {
+        margin: 0;
+
+        padding: 20px;
+    }
+
+    body {
+        background: white;
+    }
+
+    .card {
+        break-inside: avoid;
+    }
+}

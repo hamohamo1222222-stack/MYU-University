@@ -1,0 +1,703 @@
+/* =========================================
+   GENERAL
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html,
+body {
+
+    width: 100%;
+
+    min-height: 100%;
+
+}
+
+
+body {
+
+    font-family: "Segoe UI",
+                 Tahoma,
+                 Arial,
+                 sans-serif;
+
+    background: #f7f7f7;
+
+    color: #555;
+
+    direction: rtl;
+
+}
+
+
+/* =========================================
+   TOP BAR
+========================================= */
+
+.top-bar {
+
+    position: fixed;
+
+    top: 0;
+
+    right: 0;
+
+    left: 0;
+
+    height: 37px;
+
+    background: #555557;
+
+    display: flex;
+
+    align-items: center;
+
+    color: white;
+
+    z-index: 1000;
+
+}
+
+
+.top-left {
+
+    position: absolute;
+
+    left: 12px;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    direction: ltr;
+
+}
+
+
+.top-profile {
+
+    width: 30px;
+
+    height: 30px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+}
+
+
+.top-profile img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.top-icon {
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+}
+
+
+.top-icon:hover {
+
+    color: #ff7278;
+
+}
+
+
+.language-btn {
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+}
+
+
+.current-date {
+
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 8px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+
+}
+
+
+.menu-icon {
+
+    position: absolute;
+
+    right: 6px;
+
+    font-size: 15px;
+
+}
+
+
+/* =========================================
+   UNIVERSITY LOGO
+========================================= */
+
+.university-logo {
+
+    position: fixed;
+
+    top: 0;
+
+    right: 0;
+
+    width: 128px;
+
+    height: 37px;
+
+    background: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 1001;
+
+}
+
+
+.university-logo img {
+
+    max-width: 95px;
+
+    max-height: 34px;
+
+    object-fit: contain;
+
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+
+    position: fixed;
+
+    top: 37px;
+
+    right: 0;
+
+    bottom: 24px;
+
+    width: 128px;
+
+    background: #555557;
+
+    color: white;
+
+    overflow-y: auto;
+
+    z-index: 900;
+
+}
+
+
+.student-info {
+
+    text-align: center;
+
+    padding: 7px 5px 10px;
+
+}
+
+
+.student-info img {
+
+    width: 78px;
+
+    height: 78px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+}
+
+
+.student-info h3 {
+
+    margin-top: 5px;
+
+    margin-bottom: 3px;
+
+    font-size: 11px;
+
+    color: #ff7278;
+
+}
+
+
+.student-info span {
+
+    display: block;
+
+    color: #ff7278;
+
+    font-size: 8px;
+
+    line-height: 15px;
+
+}
+
+
+/* =========================================
+   SIDEBAR MENU
+========================================= */
+
+.sidebar-menu {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.sidebar-menu a {
+
+    min-height: 29px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 6px 7px;
+
+    color: #eee;
+
+    text-decoration: none;
+
+    font-size: 9px;
+
+    border-bottom: 1px solid
+                rgba(255,255,255,0.05);
+
+}
+
+
+.sidebar-menu a i:first-child {
+
+    width: 14px;
+
+    text-align: center;
+
+    font-size: 10px;
+
+}
+
+
+.sidebar-menu a:hover {
+
+    background: #68686a;
+
+}
+
+
+.sidebar-menu a.active {
+
+    background: #78908a;
+
+    color: white;
+
+}
+
+
+.sidebar-menu .arrow {
+
+    margin-right: auto;
+
+    font-size: 8px;
+
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.main-content {
+
+    margin-right: 128px;
+
+    min-height: calc(100vh - 37px);
+
+    padding: 49px 12px 50px;
+
+    background: #f8f8f8;
+
+}
+
+
+.page-title {
+
+    text-align: right;
+
+    font-size: 16px;
+
+    font-weight: 400;
+
+    color: #444;
+
+    margin-bottom: 18px;
+
+    text-decoration: underline;
+
+    text-underline-offset: 3px;
+
+}
+
+
+/* =========================================
+   CARDS CONTAINER
+========================================= */
+
+.cards-container {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+
+/* =========================================
+   STUDENT CARD
+========================================= */
+
+.student-card {
+
+    width: 460px;
+
+    max-width: 90%;
+
+    background: white;
+
+    border: 1px solid #d3d3d3;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,0.08);
+
+}
+
+
+/* CARD HEADER */
+
+.card-header {
+
+    height: 60px;
+
+    background: #555557;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 18px;
+
+}
+
+
+.card-header span {
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+}
+
+
+.university-name img {
+
+    width: 85px;
+
+    max-height: 45px;
+
+    object-fit: contain;
+
+}
+
+
+/* CARD BODY */
+
+.card-body {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 25px;
+
+}
+
+
+.card-photo {
+
+    width: 105px;
+
+    height: 125px;
+
+    object-fit: cover;
+
+    border-radius: 3px;
+
+    border: 1px solid #ccc;
+
+}
+
+
+.student-details {
+
+    flex: 1;
+
+}
+
+
+.student-details div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    border-bottom: 1px solid #eee;
+
+    padding: 6px 0;
+
+}
+
+
+.student-details span {
+
+    font-size: 9px;
+
+    color: #999;
+
+}
+
+
+.student-details strong {
+
+    margin-top: 2px;
+
+    font-size: 11px;
+
+    color: #444;
+
+}
+
+
+/* CARD FOOTER */
+
+.card-footer {
+
+    height: 32px;
+
+    background: #f1f1f1;
+
+    border-top: 1px solid #ddd;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 9px;
+
+    color: #777;
+
+}
+
+
+/* =========================================
+   DOWNLOAD BUTTON
+========================================= */
+
+.download-card {
+
+    margin-top: 18px;
+
+    border: none;
+
+    background: #78908a;
+
+    color: white;
+
+    padding: 9px 20px;
+
+    border-radius: 3px;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+}
+
+
+.download-card:hover {
+
+    background: #657c76;
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+
+    position: fixed;
+
+    bottom: 0;
+
+    left: 0;
+
+    right: 0;
+
+    height: 24px;
+
+    background: #555557;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 3px;
+
+    font-size: 7px;
+
+    z-index: 2000;
+
+}
+
+
+.footer i {
+
+    font-size: 7px;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .sidebar {
+
+        width: 105px;
+
+    }
+
+
+    .university-logo {
+
+        width: 105px;
+
+    }
+
+
+    .main-content {
+
+        margin-right: 105px;
+
+    }
+
+
+    .student-card {
+
+        width: 95%;
+
+    }
+
+
+    .card-body {
+
+        gap: 12px;
+
+        padding: 15px;
+
+    }
+
+
+    .card-photo {
+
+        width: 80px;
+
+        height: 100px;
+
+    }
+
+}

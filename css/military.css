@@ -1,0 +1,428 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    background: #f7f7f7;
+    color: #555;
+    direction: rtl;
+}
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    height: 37px;
+
+    background: #555557;
+
+    display: flex;
+    align-items: center;
+
+    z-index: 1000;
+
+    color: white;
+}
+
+.top-left {
+    position: absolute;
+    left: 12px;
+
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 22px;
+
+    direction: ltr;
+}
+
+.top-profile {
+    width: 28px;
+    height: 28px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 1px solid #ddd;
+}
+
+.top-icon {
+    background: transparent;
+    border: none;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.top-icon:hover {
+    color: #ff777d;
+}
+
+.language-btn {
+    background: transparent;
+    border: none;
+
+    color: white;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.current-date {
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.menu-icon {
+    position: absolute;
+    right: 7px;
+
+    font-size: 16px;
+
+    color: white;
+}
+
+
+/* =========================
+   UNIVERSITY LOGO
+========================= */
+
+.university-logo {
+    position: fixed;
+
+    top: 0;
+    right: 0;
+
+    width: 128px;
+    height: 37px;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1001;
+}
+
+.university-logo img {
+    width: 82px;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    position: fixed;
+
+    top: 37px;
+    right: 0;
+    bottom: 0;
+
+    width: 128px;
+
+    background: #555557;
+
+    overflow-y: auto;
+
+    z-index: 900;
+}
+
+
+/* Student */
+
+.student-info {
+    text-align: center;
+
+    padding: 8px 5px 10px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.student-image {
+    width: 75px;
+    height: 75px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 2px solid #eee;
+}
+
+.student-info h3 {
+    color: #ff7078;
+
+    font-size: 12px;
+
+    margin-top: 5px;
+}
+
+.student-info p {
+    color: #ff7078;
+
+    font-size: 8px;
+
+    margin-top: 3px;
+}
+
+
+/* Menu */
+
+.side-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-menu a {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    min-height: 30px;
+
+    padding: 6px 7px;
+
+    color: #eee;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+
+    transition: background 0.2s;
+}
+
+.side-menu a i {
+    width: 15px;
+
+    text-align: center;
+
+    font-size: 11px;
+}
+
+.side-menu a:hover {
+    background: #6a6a6c;
+}
+
+.side-menu a.active {
+    background: #84958f;
+
+    color: white;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content {
+    margin-right: 128px;
+
+    padding-top: 50px;
+    padding-left: 12px;
+    padding-right: 12px;
+
+    padding-bottom: 45px;
+
+    min-height: 100vh;
+}
+
+.page-title {
+    text-align: right;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    color: #555;
+
+    margin-bottom: 12px;
+
+    padding-right: 8px;
+}
+
+
+/* =========================
+   CONTENT BOX
+========================= */
+
+.content-box {
+    width: 100%;
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 3px;
+
+    margin-bottom: 18px;
+
+    overflow: hidden;
+}
+
+.box-header {
+    background: #ddd;
+
+    border-bottom: 1px solid #ccc;
+
+    padding: 9px 15px;
+
+    text-align: right;
+
+    color: #555;
+
+    font-size: 12px;
+
+    font-weight: 500;
+}
+
+.box-content {
+    min-height: 260px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty-state {
+    text-align: center;
+
+    color: #777;
+}
+
+.empty-state i {
+    font-size: 38px;
+
+    color: #ff7078;
+
+    margin-bottom: 12px;
+}
+
+.empty-state h3 {
+    font-size: 15px;
+
+    margin-bottom: 8px;
+
+    color: #555;
+}
+
+.empty-state p {
+    font-size: 12px;
+
+    color: #888;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    position: fixed;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    height: 23px;
+
+    background: #555557;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 8px;
+
+    z-index: 1000;
+}
+
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+.sidebar::-webkit-scrollbar {
+    width: 3px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #777;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        width: 105px;
+    }
+
+    .main-content {
+        margin-right: 105px;
+    }
+
+    .university-logo {
+        width: 105px;
+    }
+
+    .side-menu a {
+        font-size: 8px;
+    }
+
+    .student-image {
+        width: 60px;
+        height: 60px;
+    }
+
+}

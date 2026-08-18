@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>صندوق البريد</title>
+
+    <link rel="stylesheet" href="../css/mailbox.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+
+    <!-- ================= TOP BAR ================= -->
+
+    <header class="top-bar">
+
+        <div class="top-left">
+
+            <div class="top-profile"
+                 onclick="location.href='profile.html'">
+
+                <img src="../images/profile.jpg"
+                     alt="Profile">
+
+            </div>
+
+
+            <button class="top-icon logout-btn"
+                    title="تسجيل الخروج">
+
+                <i class="fa-solid fa-power-off"></i>
+
+            </button>
+
+
+            <button class="top-icon">
+
+                <i class="fa-solid fa-key"></i>
+
+            </button>
+
+
+            <button class="top-icon">
+
+                <i class="fa-solid fa-gears"></i>
+
+            </button>
+
+
+            <button class="language-btn">
+                En
+            </button>
+
+        </div>
+
+
+        <div class="current-date"
+             id="currentDate">
+        </div>
+
+
+        <div class="menu-icon">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= UNIVERSITY LOGO ================= -->
+
+    <div class="university-logo">
+
+        <img src="../images/MYU.PNG"
+             alt="MYU">
+
+    </div>
+
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+
+        <!-- STUDENT -->
+
+        <div class="student-info">
+
+            <img src="../images/profile.jpg"
+                 alt="Student">
+
+            <h3>أحمد محمد</h3>
+
+            <span>جامعة مايو</span>
+
+            <span>هندسة الحاسب</span>
+
+        </div>
+
+
+
+        <!-- MENU -->
+
+        <nav class="sidebar-menu">
+
+
+            <a href="profile.html">
+
+                <i class="fa-regular fa-address-card"></i>
+
+                <span>البيانات الشخصية</span>
+
+            </a>
+
+
+            <a href="results.html">
+
+                <i class="fa-solid fa-chart-column"></i>
+
+                <span>النتائج الدراسية</span>
+
+            </a>
+
+
+            <a href="registration.html">
+
+                <i class="fa-solid fa-file-signature"></i>
+
+                <span>التسجيل الأكاديمي</span>
+
+            </a>
+
+
+            <a href="military.html">
+
+                <i class="fa-solid fa-user-shield"></i>
+
+                <span>التربية العسكرية</span>
+
+            </a>
+
+
+            <a href="cards.html">
+
+                <i class="fa-regular fa-id-card"></i>
+
+                <span>البطاقات التعريفية</span>
+
+            </a>
+
+
+            <a href="survey.html">
+
+                <i class="fa-regular fa-circle-question"></i>
+
+                <span>استبيان</span>
+
+            </a>
+
+
+            <!-- ACTIVE -->
+
+            <a href="mailbox.html" class="active">
+
+                <i class="fa-regular fa-envelope"></i>
+
+                <span>صندوق البريد</span>
+
+            </a>
+
+
+            <a href="registration-form.html">
+
+                <i class="fa-regular fa-file-lines"></i>
+
+                <span>استمارة التسجيل</span>
+
+            </a>
+
+
+            <a href="complaints.html">
+
+                <i class="fa-solid fa-scale-balanced"></i>
+
+                <span>تظلمات</span>
+
+            </a>
+
+
+            <a href="withdraw.html">
+
+                <i class="fa-regular fa-file-excel"></i>
+
+                <span>الانسحاب من مقرر</span>
+
+            </a>
+
+
+            <a href="fees.html">
+
+                <i class="fa-solid fa-money-bill-wave"></i>
+
+                <span>الرسوم</span>
+
+                <i class="fa-solid fa-caret-down arrow"></i>
+
+            </a>
+
+
+            <a href="courses.html">
+
+                <i class="fa-solid fa-book-open"></i>
+
+                <span>مقرراتي</span>
+
+                <i class="fa-solid fa-caret-down arrow"></i>
+
+            </a>
+
+
+            <a href="attendance.html">
+
+                <i class="fa-solid fa-clipboard-check"></i>
+
+                <span>الحضور والغياب</span>
+
+                <i class="fa-solid fa-caret-down arrow"></i>
+
+            </a>
+
+
+            <a href="schedule.html">
+
+                <i class="fa-regular fa-calendar"></i>
+
+                <span>الجداول</span>
+
+                <i class="fa-solid fa-caret-down arrow"></i>
+
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+
+        <h1 class="page-title">
+            صندوق البريد
+        </h1>
+
+
+        <div class="mail-layout">
+
+
+            <!-- ================= MESSAGE AREA ================= -->
+
+            <section class="messages-area">
+
+
+                <!-- SEARCH / REFRESH -->
+
+                <div class="mail-tools">
+
+                    <input type="text"
+                           id="mailSearch"
+                           class="mail-search"
+                           placeholder="">
+
+
+                    <button class="refresh-btn"
+                            id="refreshBtn"
+                            title="تحديث">
+
+                        <i class="fa-solid fa-arrows-rotate"></i>
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- MESSAGES TABLE -->
+
+                <div class="messages-box">
+
+
+                    <table class="messages-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th class="check-column">
+
+                                    <input type="checkbox"
+                                           id="selectAll">
+
+                                </th>
+
+                                <th>
+                                    إلى
+                                </th>
+
+                                <th>
+                                    الرسالة
+                                </th>
+
+                                <th>
+                                    في
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="messagesBody">
+
+                            <!-- No messages -->
+
+                            <tr class="empty-row">
+
+                                <td colspan="4">
+
+                                    ليست هناك بيانات متاحة في الجدول
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+
+
+                    <!-- PAGINATION -->
+
+                    <div class="pagination-area">
+
+                        <span>
+                            يعرض 0 إلى 0 من أصل 0 سجل
+                        </span>
+
+
+                        <div class="pagination-buttons">
+
+                            <button id="prevPage">
+                                &lt;
+                            </button>
+
+                            <button id="nextPage">
+                                &gt;
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= MAIL SIDE ================= -->
+
+            <aside class="mail-side">
+
+
+                <button class="compose-btn"
+                        id="composeBtn">
+
+                    <i class="fa-solid fa-pen-to-square"></i>
+
+                    إنشاء رسالة
+
+                </button>
+
+
+
+                <div class="mail-folders">
+
+
+                    <button class="folder active-folder">
+
+                        <span>
+                            صندوق الوارد
+                        </span>
+
+                    </button>
+
+
+                    <button class="folder">
+
+                        <span>
+                            صندوق الصادر
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ================= COMPOSE MODAL ================= -->
+
+    <div class="modal-overlay"
+         id="composeModal">
+
+
+        <div class="compose-modal">
+
+
+            <div class="modal-header">
+
+                <h2>
+                    إنشاء رسالة
+                </h2>
+
+
+                <button id="closeModal">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <div class="modal-body">
+
+
+                <label>
+                    إلى
+                </label>
+
+                <input type="text"
+                       id="receiver"
+                       placeholder="اسم المستلم">
+
+
+                <label>
+                    الموضوع
+                </label>
+
+                <input type="text"
+                       id="subject"
+                       placeholder="موضوع الرسالة">
+
+
+                <label>
+                    الرسالة
+                </label>
+
+                <textarea id="message"
+                          rows="6"
+                          placeholder="اكتب رسالتك هنا..."></textarea>
+
+
+            </div>
+
+
+            <div class="modal-footer">
+
+                <button class="cancel-btn"
+                        id="cancelBtn">
+
+                    إلغاء
+
+                </button>
+
+
+                <button class="send-btn"
+                        id="sendBtn">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                    إرسال
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <i class="fa-solid fa-shield-halved"></i>
+
+        سياسة خصوصية وتأمين البيانات
+
+    </footer>
+
+
+
+    <script src="../js/mailbox.js"></script>
+
+</body>
+
+</html>

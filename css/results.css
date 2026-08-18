@@ -1,0 +1,236 @@
+/* =========================
+   RESULTS PAGE
+========================= */
+
+.results-content {
+    margin-right: 125px;
+
+    padding: 48px 12px 50px;
+
+    min-height: calc(100vh - 60px);
+}
+
+
+/* =========================
+   RESULT SECTION
+========================= */
+
+.result-section {
+    width: 100%;
+
+    margin-bottom: 16px;
+
+    background: #fff;
+
+    border: 1px solid #ddd;
+
+    border-radius: 3px;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   TERM HEADER
+========================= */
+
+.term-header {
+    height: 35px;
+
+    background: #ddd;
+
+    border-bottom: 1px solid #c9c9c9;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 15px;
+
+    gap: 15px;
+
+    font-size: 11px;
+
+    color: #555;
+}
+
+
+.term-header span:first-child {
+    margin-left: auto;
+
+    font-weight: normal;
+}
+
+
+.term-header i {
+    order: -1;
+
+    font-size: 8px;
+
+    color: #555;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.table-wrapper {
+    padding: 0 15px 12px;
+}
+
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    table-layout: fixed;
+
+    direction: rtl;
+
+    font-size: 10px;
+}
+
+
+thead {
+    background: #fff;
+}
+
+
+th {
+    height: 45px;
+
+    font-weight: bold;
+
+    color: #555;
+
+    text-align: right;
+
+    border-bottom: 1px solid #ddd;
+
+    padding: 0 8px;
+}
+
+
+td {
+    height: 37px;
+
+    padding: 0 8px;
+
+    color: #555;
+
+    border-bottom: 1px solid #ddd;
+
+    text-align: right;
+}
+
+
+/* الأعمدة */
+
+th:nth-child(1),
+td:nth-child(1) {
+    width: 12%;
+}
+
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 52%;
+}
+
+
+th:nth-child(3),
+td:nth-child(3) {
+    width: 18%;
+}
+
+
+th:nth-child(4),
+td:nth-child(4) {
+    width: 18%;
+}
+
+
+/* =========================
+   SUBJECT ENGLISH
+========================= */
+
+td:nth-child(2) {
+    direction: ltr;
+
+    text-align: right;
+
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* =========================
+   SUMMARY
+========================= */
+
+.term-summary {
+    min-height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 10px 20px;
+
+    font-size: 10px;
+
+    direction: rtl;
+}
+
+
+.term-summary div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    color: #555;
+}
+
+
+.term-summary strong {
+    font-weight: bold;
+}
+
+
+.term-summary span {
+    font-size: 10px;
+}
+
+
+/* =========================
+   HOVER
+========================= */
+
+.result-section tbody tr:hover {
+    background: #fafafa;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .results-content {
+        margin-right: 110px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 650px;
+    }
+}

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>الرسوم</title>
+
+    <link rel="stylesheet" href="../css/fees.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <header class="top-bar">
+
+        <div class="top-icons">
+
+            <img src="../images/profile.jpg" class="top-profile">
+
+            <button class="top-btn logout-btn" title="تسجيل الخروج">
+                <i class="fa-solid fa-power-off"></i>
+            </button>
+
+            <button class="top-btn">
+                <i class="fa-solid fa-key"></i>
+            </button>
+
+            <button class="top-btn">
+                <i class="fa-solid fa-gear"></i>
+            </button>
+
+            <span class="language">En</span>
+
+        </div>
+
+        <div class="current-date" id="currentDate"></div>
+
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+    </header>
+
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <img src="../images/MYU.PNG" alt="May University">
+        </div>
+
+        <div class="student-info">
+
+            <img src="../images/profile.jpg" class="student-photo">
+
+            <h3>أحمد محمد</h3>
+
+            <p>جامعة مايو</p>
+            <p>هندسة الحاسب</p>
+
+        </div>
+
+
+        <nav class="side-menu">
+
+            <a href="profile.html">
+                <i class="fa-regular fa-address-card"></i>
+                البيانات الشخصية
+            </a>
+
+            <a href="results.html">
+                <i class="fa-solid fa-chart-column"></i>
+                النتائج الدراسية
+            </a>
+
+            <a href="registration.html">
+                <i class="fa-solid fa-user-pen"></i>
+                التسجيل الأكاديمي
+            </a>
+
+            <a href="military.html">
+                <i class="fa-solid fa-user-shield"></i>
+                التربية العسكرية
+            </a>
+
+            <a href="cards.html">
+                <i class="fa-solid fa-id-card"></i>
+                البطاقات التعريفية
+            </a>
+
+            <a href="survey.html">
+                <i class="fa-regular fa-circle-question"></i>
+                استبيان
+            </a>
+
+            <a href="mailbox.html">
+                <i class="fa-regular fa-envelope"></i>
+                صندوق البريد
+            </a>
+
+            <a href="enrollment.html">
+                <i class="fa-regular fa-rectangle-list"></i>
+                استمارة التسجيل
+            </a>
+
+            <a href="complaints.html">
+                <i class="fa-solid fa-gavel"></i>
+                تظلمات
+            </a>
+
+            <a href="withdrawal.html">
+                <i class="fa-regular fa-file-lines"></i>
+                الانسحاب من مقرر
+            </a>
+
+            <a href="fees.html" class="active">
+                <i class="fa-solid fa-money-bill"></i>
+                الرسوم
+            </a>
+
+            <a href="courses.html">
+                <i class="fa-solid fa-book-open"></i>
+                مقرراتي
+            </a>
+
+            <a href="attendance.html">
+                <i class="fa-regular fa-calendar-check"></i>
+                الحضور والغياب
+            </a>
+
+            <a href="schedule.html">
+                <i class="fa-regular fa-calendar"></i>
+                الجداول
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <div class="page-title">
+            الرسوم
+        </div>
+
+
+        <!-- STUDENT DATA -->
+        <section class="card">
+
+            <div class="card-title">
+                <i class="fa-solid fa-user"></i>
+                بيانات الطالب
+            </div>
+
+            <div class="student-data">
+
+                <div>
+                    <span>الاسم</span>
+                    <strong>أحمد محمد محمد عبدالسلام</strong>
+                </div>
+
+                <div>
+                    <span>الكود</span>
+                    <strong>25120851</strong>
+                </div>
+
+                <div>
+                    <span>البرنامج</span>
+                    <strong>هندسة الحاسب</strong>
+                </div>
+
+                <div>
+                    <span>المستوى</span>
+                    <strong>الأول</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FEES SUMMARY -->
+        <section class="fees-summary">
+
+            <!-- TOTAL -->
+            <div class="fee-box">
+
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+
+                <span>إجمالي الرسوم المطلوبة</span>
+
+                <strong>
+                    28,000
+                </strong>
+
+                <small>جنيه</small>
+
+            </div>
+
+
+            <!-- PAID -->
+            <div class="fee-box paid">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <span>المبلغ المدفوع</span>
+
+                <strong>
+                    0
+                </strong>
+
+                <small>جنيه</small>
+
+            </div>
+
+
+            <!-- REMAINING -->
+            <div class="fee-box remaining">
+
+                <i class="fa-solid fa-hourglass-half"></i>
+
+                <span>المبلغ المتبقي</span>
+
+                <strong>
+                    28,000
+                </strong>
+
+                <small>جنيه</small>
+
+            </div>
+
+        </section>
+
+
+        <!-- ONLINE PAYMENT -->
+        <section class="payment-card">
+
+            <div class="payment-content">
+
+                <div class="payment-icon">
+                    <i class="fa-solid fa-credit-card"></i>
+                </div>
+
+                <div class="payment-text">
+
+                    <h3>
+                        الدفع الإلكتروني
+                    </h3>
+
+                    <p>
+                        يمكنك سداد الرسوم الدراسية إلكترونيًا باستخدام بطاقة الدفع.
+                    </p>
+
+                </div>
+
+                <a
+                    href="https://epay.muc.edu.eg/pgw/pay?service=Credit&ID=25120851&univID=1648.&facID=1648.3.&securityKey=537aed93273573964d51c24774ccc50bc712366c95d34ee40bb00ce55f966a73"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="payment-btn">
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    دفع الرسوم الآن
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- FEES TABLE -->
+        <section class="card">
+
+            <div class="card-title">
+
+                <span>
+                    <i class="fa-solid fa-list"></i>
+                    تفاصيل الرسوم
+                </span>
+
+                <button class="print-btn" id="printBtn">
+
+                    <i class="fa-solid fa-print"></i>
+
+                    طباعة
+
+                </button>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>البند</th>
+                            <th>المبلغ</th>
+                            <th>المدفوع</th>
+                            <th>المتبقي</th>
+                            <th>الحالة</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                المصروفات الدراسية
+                            </td>
+
+                            <td>
+                                28,000 جنيه
+                            </td>
+
+                            <td>
+                                0 جنيه
+                            </td>
+
+                            <td>
+                                28,000 جنيه
+                            </td>
+
+                            <td>
+
+                                <span class="status unpaid">
+                                    غير مدفوع
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- PAYMENT HISTORY -->
+        <section class="card">
+
+            <div class="card-title">
+
+                <i class="fa-solid fa-clock-rotate-left"></i>
+
+                سجل المدفوعات
+
+            </div>
+
+
+            <div class="empty-payment">
+
+                <i class="fa-regular fa-folder-open"></i>
+
+                <p>
+                    لا توجد عمليات دفع مسجلة حتى الآن.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- NOTE -->
+        <div class="note">
+
+            <i class="fa-solid fa-circle-info"></i>
+
+            <span>
+                إجمالي الرسوم المطلوبة حاليًا هو 28,000 جنيه ولم يتم تسجيل أي دفعات.
+            </span>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        © سياسة خصوصية وتأمين البيانات
+
+    </footer>
+
+
+    <script src="../js/fees.js"></script>
+
+</body>
+
+</html>

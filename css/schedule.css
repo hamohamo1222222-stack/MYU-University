@@ -1,0 +1,655 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f7f7f7;
+    color: #555;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    direction: rtl;
+}
+
+
+/* ================= TOP BAR ================= */
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 37px;
+
+    background: #555658;
+    color: white;
+
+    z-index: 1000;
+}
+
+.top-icons {
+    position: absolute;
+    left: 12px;
+    top: 0;
+
+    height: 37px;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    direction: ltr;
+}
+
+.top-profile {
+    width: 29px;
+    height: 29px;
+
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.top-btn {
+    border: 0;
+    background: transparent;
+
+    color: white;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.top-btn:hover {
+    color: #ff7075;
+}
+
+.language {
+    font-family: Georgia, serif;
+    font-size: 17px;
+}
+
+.current-date {
+    position: absolute;
+
+    top: 13px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.menu-icon {
+    position: absolute;
+
+    right: 10px;
+    top: 10px;
+
+    font-size: 15px;
+}
+
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+    position: fixed;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 152px;
+
+    background: #59595b;
+    color: white;
+
+    z-index: 900;
+
+    overflow-y: auto;
+}
+
+.sidebar-logo {
+    width: 100%;
+    height: 37px;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-logo img {
+    width: 112px;
+    height: 34px;
+
+    object-fit: contain;
+}
+
+
+/* ================= STUDENT ================= */
+
+.student-info {
+    text-align: center;
+
+    padding: 9px 5px 11px;
+
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.student-photo {
+    width: 76px;
+    height: 76px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 2px solid #ddd;
+}
+
+.student-info h3 {
+    margin: 5px 0 2px;
+
+    color: #ff6d72;
+
+    font-size: 12px;
+}
+
+.student-info p {
+    margin: 2px 0;
+
+    color: #ff777b;
+
+    font-size: 8px;
+}
+
+
+/* ================= MENU ================= */
+
+.side-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-menu a {
+    min-height: 30px;
+
+    padding: 0 10px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #eee;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    border-bottom: 1px solid rgba(255,255,255,.05);
+
+    transition: background .2s;
+}
+
+.side-menu a i {
+    width: 16px;
+
+    text-align: center;
+
+    font-size: 11px;
+}
+
+.side-menu a:hover {
+    background: #71827d;
+}
+
+.side-menu a.active {
+    background: #81968e;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+
+/* ================= MAIN ================= */
+
+.main-content {
+    margin-right: 152px;
+
+    padding: 52px 14px 60px;
+
+    min-height: 100vh;
+}
+
+.page-title {
+    margin: 0 7px 15px;
+
+    color: #444;
+
+    font-size: 18px;
+
+    font-weight: 400;
+
+    text-decoration: underline;
+}
+
+
+/* ================= CARD ================= */
+
+.card {
+    background: white;
+
+    border: 1px solid #d9d9d9;
+
+    margin-bottom: 16px;
+
+    overflow: hidden;
+}
+
+.card-title {
+    min-height: 37px;
+
+    padding: 8px 13px;
+
+    background: #ddd;
+
+    border-bottom: 1px solid #c9c9c9;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: #555;
+
+    font-size: 12px;
+}
+
+.card-title i {
+    margin-left: 5px;
+
+    color: #ff7075;
+}
+
+
+/* ================= STUDENT DATA ================= */
+
+.student-data {
+    padding: 18px 25px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.student-data div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.student-data span {
+    color: #888;
+
+    font-size: 9px;
+}
+
+.student-data strong {
+    color: #555;
+
+    font-size: 11px;
+
+    font-weight: 500;
+}
+
+
+/* ================= SCHEDULE HEADER ================= */
+
+.schedule-header {
+    background: white;
+
+    border: 1px solid #d9d9d9;
+
+    margin-bottom: 12px;
+
+    padding: 14px 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.semester-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.semester-info > i {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e8efec;
+
+    color: #71877f;
+
+    font-size: 19px;
+}
+
+.semester-info h3 {
+    margin: 0 0 3px;
+
+    color: #555;
+
+    font-size: 13px;
+}
+
+.semester-info p {
+    margin: 0;
+
+    color: #999;
+
+    font-size: 9px;
+}
+
+
+/* ================= PRINT ================= */
+
+.print-btn {
+    border: 1px solid #bbb;
+
+    background: #f5f5f5;
+
+    color: #555;
+
+    padding: 7px 13px;
+
+    font-family: inherit;
+
+    font-size: 9px;
+
+    cursor: pointer;
+}
+
+.print-btn:hover {
+    background: #e7e7e7;
+}
+
+
+/* ================= DAY FILTER ================= */
+
+.day-filter {
+    display: flex;
+
+    gap: 5px;
+
+    margin-bottom: 12px;
+
+    flex-wrap: wrap;
+}
+
+.day-btn {
+    border: 1px solid #ccc;
+
+    background: white;
+
+    color: #666;
+
+    padding: 7px 14px;
+
+    font-family: inherit;
+
+    font-size: 9px;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.day-btn:hover {
+    background: #e9e9e9;
+}
+
+.day-btn.active {
+    background: #71877f;
+
+    border-color: #71877f;
+
+    color: white;
+}
+
+
+/* ================= TABLE ================= */
+
+.schedule-card {
+    overflow: hidden;
+}
+
+.table-container {
+    padding: 10px;
+
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    min-width: 850px;
+
+    border-collapse: collapse;
+
+    direction: rtl;
+}
+
+th {
+    padding: 10px 8px;
+
+    background: #d9dcde;
+
+    border: 1px solid #c7cacc;
+
+    color: #555;
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+td {
+    padding: 11px 8px;
+
+    border: 1px solid #ddd;
+
+    color: #555;
+
+    font-size: 10px;
+
+    text-align: center;
+}
+
+tbody tr:hover td {
+    background: #fafafa;
+}
+
+
+/* ================= TYPES ================= */
+
+.lecture,
+.section,
+.lab {
+    display: inline-block;
+
+    padding: 4px 9px;
+
+    border-radius: 2px;
+
+    font-size: 8px;
+}
+
+.lecture {
+    background: #e7efec;
+
+    color: #59766a;
+}
+
+.section {
+    background: #eee9e0;
+
+    color: #8a7656;
+}
+
+.lab {
+    background: #e8e7ef;
+
+    color: #66647b;
+}
+
+
+/* ================= LEGEND ================= */
+
+.legend {
+    padding: 15px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+.legend div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 9px;
+}
+
+.legend-box {
+    width: 13px;
+    height: 13px;
+
+    display: inline-block;
+
+    border-radius: 2px;
+}
+
+.legend-box.lecture {
+    background: #e7efec;
+}
+
+.legend-box.section {
+    background: #eee9e0;
+}
+
+.legend-box.lab {
+    background: #e8e7ef;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    position: fixed;
+
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    height: 26px;
+
+    background: #555658;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 8px;
+
+    z-index: 1000;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 950px) {
+
+    .sidebar {
+        width: 125px;
+    }
+
+    .main-content {
+        margin-right: 125px;
+    }
+
+    .student-data {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .student-data {
+        grid-template-columns: 1fr;
+    }
+
+    .schedule-header {
+        align-items: flex-start;
+
+        gap: 12px;
+
+        flex-direction: column;
+    }
+}
+
+
+/* ================= PRINT ================= */
+
+@media print {
+
+    .top-bar,
+    .sidebar,
+    footer,
+    .day-filter,
+    .print-btn {
+        display: none !important;
+    }
+
+    .main-content {
+        margin: 0;
+
+        padding: 20px;
+    }
+
+    body {
+        background: white;
+    }
+
+    .card,
+    .schedule-header {
+        break-inside: avoid;
+    }
+}

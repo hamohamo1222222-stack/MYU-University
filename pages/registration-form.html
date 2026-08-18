@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>استمارة التسجيل</title>
+
+    <link rel="stylesheet" href="../css/registration-form.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <header class="top-bar">
+
+        <div class="top-icons">
+
+            <img src="../images/profile.jpg" class="top-profile">
+
+            <i class="fa-solid fa-power-off logout-btn"></i>
+
+            <i class="fa-solid fa-key"></i>
+
+            <i class="fa-solid fa-gears"></i>
+
+            <span>En</span>
+
+        </div>
+
+        <div class="date" id="currentDate"></div>
+
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <div class="university-logo">
+            <img src="../images/MYU.PNG">
+        </div>
+
+    </header>
+
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="student-profile">
+
+            <img src="../images/profile.jpg">
+
+            <h3>أحمد محمد</h3>
+
+            <p>جامعة مايو</p>
+
+            <p>هندسة الحاسب</p>
+
+        </div>
+
+
+        <nav class="side-menu">
+
+            <a href="profile.html">
+                <i class="fa-regular fa-id-card"></i>
+                البيانات الشخصية
+            </a>
+
+            <a href="results.html">
+                <i class="fa-solid fa-chart-column"></i>
+                النتائج الدراسية
+            </a>
+
+            <a href="registration.html">
+                <i class="fa-solid fa-pen-to-square"></i>
+                التسجيل الأكاديمي
+            </a>
+
+            <a href="military.html">
+                <i class="fa-solid fa-user-shield"></i>
+                التربية العسكرية
+            </a>
+
+            <a href="cards.html">
+                <i class="fa-regular fa-id-card"></i>
+                البطاقات التعريفية
+            </a>
+
+            <a href="survey.html">
+                <i class="fa-regular fa-circle-question"></i>
+                استبيان
+            </a>
+
+            <a href="mailbox.html">
+                <i class="fa-regular fa-envelope"></i>
+                صندوق البريد
+            </a>
+
+            <a href="registration-form.html" class="active">
+                <i class="fa-regular fa-file-lines"></i>
+                استمارة التسجيل
+            </a>
+
+            <a href="complaints.html">
+                <i class="fa-solid fa-gavel"></i>
+                تظلمات
+            </a>
+
+            <a href="withdrawal.html">
+                <i class="fa-regular fa-file-excel"></i>
+                الانسحاب من مقرر
+            </a>
+
+            <a href="fees.html">
+                <i class="fa-solid fa-money-bill"></i>
+                الرسوم
+            </a>
+
+            <a href="courses.html">
+                <i class="fa-solid fa-book-open"></i>
+                مقرراتي
+            </a>
+
+            <a href="attendance.html">
+                <i class="fa-solid fa-calendar-check"></i>
+                الحضور والغياب
+            </a>
+
+            <a href="schedule.html">
+                <i class="fa-regular fa-calendar"></i>
+                الجداول
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <h2 class="page-title">
+            استمارة التسجيل
+        </h2>
+
+
+        <!-- STUDENT DATA -->
+        <section class="registration-box">
+
+            <div class="box-header">
+                بيانات الطالب
+            </div>
+
+            <div class="student-data">
+
+                <div>
+                    <span>الاسم:</span>
+                    <strong>أحمد محمد محمد عبدالسلام</strong>
+                </div>
+
+                <div>
+                    <span>الكود:</span>
+                    <strong>25120851</strong>
+                </div>
+
+                <div>
+                    <span>البرنامج:</span>
+                    <strong>Engineering computer </strong>
+                </div>
+
+                <div>
+                    <span>المستوى:</span>
+                    <strong>الأول</strong>
+                </div>
+
+                <div>
+                    <span>العام الجامعي:</span>
+                    <strong>2026-2025</strong>
+                </div>
+
+                <div>
+                    <span> المشرف الأكاديمي:</span>
+                    <strong>DR / Amal elsayed</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- COURSES -->
+        <section class="registration-box">
+
+            <div class="box-header">
+                المقررات المسجلة
+            </div>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>الكود</th>
+                            <th>المقرر</th>
+                            <th>الساعات المعتمدة</th>
+                            <th>ساعات المحاضرة</th>
+                            <th>ساعات العمل</th>
+                            <th>الساعات العملية</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>CSE112</td>
+                            <td>Database Management Systems</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+
+                        <tr>
+                            <td>PHM141</td>
+                            <td>Chemistry</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+
+                        <tr>
+                            <td>EEE313</td>
+                            <td>Electrical and Electronic Circuits</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+
+                        <tr>
+                            <td>PHM111</td>
+                            <td>Mathematics for Engineers and Scientists 1</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+
+                        <tr>
+                            <td>CSE212</td>
+                            <td>Praxis Programming</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+
+                        <tr>
+                            <td>CSE121</td>
+                            <td>Introduction to Computer Systems</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+
+                        <tr>
+                            <td>CPE612</td>
+                            <td>Database Management Systems 2</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+
+                        <tr>
+                            <td>PHM121</td>
+                            <td>Physics</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+
+                        <tr>
+                            <td>ENG117</td>
+                            <td>Engineering Drawing and Projection</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+
+                        <tr>
+                            <td>ENG118</td>
+                            <td>Logic and Proof</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+
+                        <tr>
+                            <td>CSE111</td>
+                            <td>Software Development 1</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+
+                        <tr>
+                            <td>ENG116</td>
+                            <td>Discrete Mathematics</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+
+                    </tbody>
+
+                    <tfoot>
+
+                        <tr>
+                            <td colspan="2">
+                                إجمالي الساعات
+                            </td>
+
+                            <td>
+                                32
+                            </td>
+
+                            <td>
+                                24
+                            </td>
+
+                            <td>
+                                12
+                            </td>
+
+                            <td>
+                                12
+                            </td>
+                        </tr>
+
+                    </tfoot>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONFIRMATION -->
+        <section class="registration-box">
+
+            <div class="box-header">
+                إقرار الطالب
+            </div>
+
+            <div class="confirmation">
+
+                <label>
+
+                    <input type="checkbox" id="agreement">
+
+                    أقر بأن جميع البيانات والمقررات الموضحة في استمارة التسجيل
+                    صحيحة وأتحمل مسؤولية مراجعتها.
+
+                </label>
+
+                <button id="submitBtn">
+
+                    <i class="fa-solid fa-check"></i>
+
+                    تأكيد التسجيل
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRINT -->
+        <button class="print-btn" id="printBtn">
+
+            <i class="fa-solid fa-print"></i>
+
+            طباعة الاستمارة
+
+        </button>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        © سياسة خصوصية وتأمين البيانات
+    </footer>
+
+
+    <script src="../js/registration-form.js"></script>
+
+</body>
+
+</html>

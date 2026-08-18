@@ -1,0 +1,952 @@
+/* =========================================
+   GENERAL
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+
+    background: #f8f8f8;
+
+    color: #555;
+
+    direction: rtl;
+}
+
+
+/* =========================================
+   TOP BAR
+========================================= */
+
+.top-bar {
+
+    position: fixed;
+
+    top: 0;
+    right: 0;
+    left: 0;
+
+    height: 33px;
+
+    background: #555557;
+
+    display: flex;
+
+    align-items: center;
+
+    color: white;
+
+    z-index: 1000;
+}
+
+
+.top-left {
+
+    position: absolute;
+
+    left: 12px;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    direction: ltr;
+}
+
+
+.top-profile {
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    cursor: pointer;
+}
+
+
+.top-profile img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.top-icon {
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+
+.top-icon:hover {
+
+    color: #ff7077;
+}
+
+
+.language-btn {
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+
+    cursor: pointer;
+}
+
+
+.current-date {
+
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 8px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+.menu-icon {
+
+    position: absolute;
+
+    right: 7px;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.university-logo {
+
+    position: fixed;
+
+    top: 0;
+    right: 0;
+
+    width: 128px;
+    height: 33px;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 1001;
+}
+
+
+.university-logo img {
+
+    width: 95px;
+
+    max-height: 32px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+
+    position: fixed;
+
+    top: 33px;
+    right: 0;
+    bottom: 24px;
+
+    width: 128px;
+
+    background: #555557;
+
+    color: white;
+
+    overflow-y: auto;
+
+    z-index: 900;
+}
+
+
+.student-info {
+
+    text-align: center;
+
+    padding: 7px 5px 9px;
+}
+
+
+.student-info img {
+
+    width: 78px;
+
+    height: 78px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+
+.student-info h3 {
+
+    margin-top: 5px;
+
+    margin-bottom: 3px;
+
+    font-size: 11px;
+
+    color: #ff7278;
+}
+
+
+.student-info span {
+
+    display: block;
+
+    color: #ff7278;
+
+    font-size: 8px;
+
+    line-height: 15px;
+}
+
+
+/* =========================================
+   SIDEBAR MENU
+========================================= */
+
+.sidebar-menu {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.sidebar-menu a {
+
+    min-height: 29px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 6px 7px;
+
+    color: #eee;
+
+    text-decoration: none;
+
+    font-size: 9px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+
+    transition: 0.2s;
+}
+
+
+.sidebar-menu a i:first-child {
+
+    width: 14px;
+
+    text-align: center;
+
+    font-size: 10px;
+}
+
+
+.sidebar-menu a:hover {
+
+    background: #68686a;
+}
+
+
+.sidebar-menu a.active {
+
+    background: #78908a;
+
+    color: white;
+}
+
+
+.sidebar-menu .arrow {
+
+    margin-right: auto;
+
+    font-size: 8px;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.main-content {
+
+    margin-right: 128px;
+
+    min-height: calc(100vh - 33px);
+
+    padding: 48px 12px 45px;
+
+    background: #f8f8f8;
+}
+
+
+.page-title {
+
+    text-align: right;
+
+    font-size: 16px;
+
+    font-weight: 400;
+
+    color: #444;
+
+    margin-bottom: 17px;
+}
+
+
+/* =========================================
+   MAIL LAYOUT
+========================================= */
+
+.mail-layout {
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) 322px;
+
+    gap: 15px;
+
+    direction: ltr;
+}
+
+
+.messages-area {
+
+    direction: rtl;
+}
+
+
+/* =========================================
+   TOOLS
+========================================= */
+
+.mail-tools {
+
+    height: 27px;
+
+    background: white;
+
+    border: 1px solid #d5cbbb;
+
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 11px;
+}
+
+
+.mail-search {
+
+    flex: 1;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    padding: 0 10px;
+
+    font-size: 11px;
+
+    direction: rtl;
+}
+
+
+.refresh-btn {
+
+    width: 35px;
+
+    height: 100%;
+
+    border: none;
+
+    background: transparent;
+
+    color: #159bc3;
+
+    cursor: pointer;
+
+    font-size: 12px;
+}
+
+
+.refresh-btn:hover {
+
+    color: #087fa0;
+}
+
+
+/* =========================================
+   MESSAGE BOX
+========================================= */
+
+.messages-box {
+
+    background: white;
+
+    border: 1px solid #d5cbbb;
+
+    min-height: 235px;
+}
+
+
+.messages-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    table-layout: fixed;
+}
+
+
+.messages-table th {
+
+    height: 39px;
+
+    border-bottom: 1px solid #ddd;
+
+    color: #555;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    text-align: center;
+}
+
+
+.messages-table td {
+
+    border-bottom: 1px solid #eee;
+
+    font-size: 10px;
+
+    text-align: center;
+
+    height: 35px;
+}
+
+
+.messages-table th:nth-child(1) {
+
+    width: 45px;
+}
+
+
+.messages-table th:nth-child(2) {
+
+    width: 30%;
+}
+
+
+.messages-table th:nth-child(3) {
+
+    width: 35%;
+}
+
+
+.messages-table th:nth-child(4) {
+
+    width: 25%;
+}
+
+
+.check-column input {
+
+    width: 12px;
+
+    height: 12px;
+}
+
+
+.empty-row td {
+
+    height: 48px;
+
+    color: #666;
+
+    text-align: right;
+
+    padding-right: 12px;
+}
+
+
+/* =========================================
+   PAGINATION
+========================================= */
+
+.pagination-area {
+
+    min-height: 80px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    padding: 8px 15px;
+
+    gap: 12px;
+
+    font-size: 10px;
+
+    color: #666;
+}
+
+
+.pagination-buttons {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 2px;
+}
+
+
+.pagination-buttons button {
+
+    width: 28px;
+
+    height: 28px;
+
+    background: white;
+
+    border: 1px solid #d8e0e5;
+
+    color: #666;
+
+    cursor: pointer;
+
+    font-size: 12px;
+}
+
+
+.pagination-buttons button:hover {
+
+    background: #f1f1f1;
+}
+
+
+/* =========================================
+   RIGHT MAIL PANEL
+========================================= */
+
+.mail-side {
+
+    direction: rtl;
+}
+
+
+.compose-btn {
+
+    width: 100%;
+
+    height: 27px;
+
+    border: none;
+
+    background: #707b83;
+
+    color: white;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    margin-bottom: 12px;
+}
+
+
+.compose-btn:hover {
+
+    background: #626d74;
+}
+
+
+.mail-folders {
+
+    border: 1px solid #d5cbbb;
+
+    background: white;
+}
+
+
+.folder {
+
+    width: 100%;
+
+    height: 34px;
+
+    border: none;
+
+    border-bottom: 1px solid #ddd;
+
+    background: white;
+
+    text-align: right;
+
+    padding: 0 12px;
+
+    font-family: inherit;
+
+    color: #555;
+
+    font-size: 10px;
+
+    cursor: pointer;
+}
+
+
+.folder:last-child {
+
+    border-bottom: none;
+}
+
+
+.folder:hover {
+
+    background: #f5f5f5;
+}
+
+
+.folder.active-folder {
+
+    background: #fafafa;
+
+    color: #555;
+}
+
+
+.folder.active-folder span {
+
+    color: #555;
+}
+
+
+/* =========================================
+   MODAL
+========================================= */
+
+.modal-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.45);
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 3000;
+}
+
+
+.modal-overlay.show {
+
+    display: flex;
+}
+
+
+.compose-modal {
+
+    width: 480px;
+
+    max-width: 90%;
+
+    background: white;
+
+    border-radius: 4px;
+
+    box-shadow: 0 5px 30px rgba(0,0,0,0.25);
+
+    direction: rtl;
+}
+
+
+.modal-header {
+
+    height: 45px;
+
+    background: #707b83;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 15px;
+}
+
+
+.modal-header h2 {
+
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+
+.modal-header button {
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 17px;
+
+    cursor: pointer;
+}
+
+
+.modal-body {
+
+    padding: 18px;
+}
+
+
+.modal-body label {
+
+    display: block;
+
+    font-size: 10px;
+
+    margin-bottom: 5px;
+
+    color: #555;
+}
+
+
+.modal-body input,
+.modal-body textarea {
+
+    width: 100%;
+
+    border: 1px solid #ddd;
+
+    outline: none;
+
+    padding: 8px;
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+    margin-bottom: 12px;
+
+    direction: rtl;
+}
+
+
+.modal-body textarea {
+
+    resize: vertical;
+}
+
+
+.modal-body input:focus,
+.modal-body textarea:focus {
+
+    border-color: #78908a;
+}
+
+
+.modal-footer {
+
+    padding: 0 18px 18px;
+
+    display: flex;
+
+    justify-content: flex-start;
+
+    gap: 7px;
+}
+
+
+.cancel-btn,
+.send-btn {
+
+    border: none;
+
+    padding: 8px 16px;
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    border-radius: 2px;
+}
+
+
+.cancel-btn {
+
+    background: #eee;
+
+    color: #555;
+}
+
+
+.send-btn {
+
+    background: #78908a;
+
+    color: white;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+
+    position: fixed;
+
+    bottom: 0;
+
+    left: 0;
+    right: 0;
+
+    height: 24px;
+
+    background: #555557;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 3px;
+
+    font-size: 7px;
+
+    z-index: 2000;
+}
+
+
+.footer i {
+
+    font-size: 7px;
+}
+
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+.sidebar::-webkit-scrollbar {
+
+    width: 3px;
+}
+
+
+.sidebar::-webkit-scrollbar-thumb {
+
+    background: #777;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .mail-layout {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .mail-side {
+
+        order: -1;
+    }
+
+}
