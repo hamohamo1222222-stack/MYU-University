@@ -2,6 +2,11 @@
 <html lang="ar" dir="rtl">
 
 <head>
+    <script>
+    if (sessionStorage.getItem("loggedIn") !== "true") {
+        window.location.href = "login.html";
+    }
+</script>
 
     <meta charset="UTF-8">
 

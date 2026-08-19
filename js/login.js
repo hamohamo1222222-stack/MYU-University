@@ -22,3 +22,14 @@ loginForm.addEventListener("submit", function (event) {
         alert("رقم المستخدم أو كلمة المرور غير صحيحة");
     }
 });
+
+const logoutBtn = document.getElementById("logoutBtn");
+
+if (logoutBtn) {
+    logoutBtn.addEventListener("click", function () {
+        sessionStorage.removeItem("loggedIn");
+        sessionStorage.removeItem("username");
+
+        window.location.href = "login.html";
+    });
+}
