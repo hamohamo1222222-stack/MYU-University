@@ -2,11 +2,6 @@
 <html lang="ar" dir="rtl">
 
 <head>
-    <script>
-    if (sessionStorage.getItem("loggedIn") !== "true") {
-        window.location.href = "login.html";
-    }
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,6 +12,10 @@
     <!-- Font Awesome -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/portal-shared.css">
+    <script src="../js/auth-guard.js"></script>
+    <script src="../js/logout.js"></script>
+    <script src="../js/api.js"></script>
 </head>
 
 <body>
@@ -93,7 +92,7 @@
 
         <nav class="side-menu">
 
-             <a href="profile.html" class="active">
+             <a href="profile.html">
                 <i class="fa-regular fa-id-card"></i>
                 <span>البيانات الشخصية</span>
             </a>
@@ -108,7 +107,7 @@
                 <span>التسجيل الأكاديمي</span>
             </a>
 
-            <a href="military.html">
+            <a href="military.html" class="active">
                 <i class="fa-solid fa-user-shield"></i>
                 <span>التربية العسكرية</span>
             </a>
