@@ -1,0 +1,223 @@
+/* ==========================================================================
+   1. إعادة تعيين التنسيقات الافتراضية والخطوط (Reset & Layout Setup)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    direction: rtl; /* يدعم الواجهة العربية بالكامل */
+    background-color: #eef2f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   2. الشريط العلوي المشترك (Top Navbar)
+   ========================================================================== */
+.top-navbar {
+    background-color: #333333;
+    color: #ffffff;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 100;
+}
+
+.top-navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.top-navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.top-navbar i, .top-navbar span {
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* ==========================================================================
+   3. هيكل المحتوى الرئيسي والشريط الجانبي (Main Layout & Sidebar)
+   ========================================================================== */
+.app-container {
+    display: flex;
+    flex: 1;
+}
+
+/* الشريط الجانبي الأيمن الداكن */
+.sidebar {
+    width: 240px;
+    background-color: #3a4144;
+    color: #cdd1d4;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* منطقة الملف الشخصي أعلى اليمين داخل السايدبار */
+.user-profile-section {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #4f575b;
+}
+
+/* دمج مواضع الصورتين يمين الشاشة */
+.profile-img-container {
+    display: flex;
+    justify-content: center;
+    gap: 8px; /* لوضع الصورتين متجاورتين كما في الواجهة */
+    margin-bottom: 10px;
+}
+
+.user-avatar {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 2px solid #5cb85c;
+    object-fit: cover;
+}
+
+.user-info-text h3 {
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.user-info-text p {
+    font-size: 11px;
+    color: #a6b1b9;
+}
+
+/* عناصر القائمة الجانبية */
+.sidebar-menu {
+    list-style: none;
+    width: 100%;
+}
+
+.sidebar-item a {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: #cdd1d4;
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.2s ease;
+    border-right: 4px solid transparent;
+}
+
+.sidebar-item.active a, .sidebar-item a:hover {
+    background-color: #2e3436;
+    color: #ffffff;
+    border-right-color: #5cb85c;
+}
+
+/* ==========================================================================
+   4. منطقة المحتوى المركزي (Main Content Area)
+   ========================================================================== */
+.main-content {
+    flex: 1;
+    padding: 25px;
+    overflow-y: auto;
+    background-color: #f7f9fa;
+    position: relative;
+}
+
+/* هيدر الصفحة الفردية */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e2e7eb;
+    padding-bottom: 10px;
+}
+
+.page-title {
+    font-size: 20px;
+    color: #444;
+}
+
+/* مكان الصورة المفردة على اليسار في محتوى الصفحة */
+.left-logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.left-brand-logo {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* ==========================================================================
+   5. الحاويات، الجداول والبطاقات الموحدة (Cards & Forms Setup)
+   ========================================================================== */
+.data-card {
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+    border: 1px solid #e2e7eb;
+}
+
+.card-header {
+    background-color: #d6dbdf;
+    color: #333;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 14px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+/* التنسيق الشبكي لعرض البيانات والحقول بشكل منظم */
+.card-body-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 أعمدة متساوية مثل تصميم الأكاديمية */
+    gap: 15px;
+    padding: 20px;
+}
+
+.data-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.field-label {
+    font-size: 12px;
+    color: #7f8c8d;
+    font-weight: 600;
+}
+
+.field-value {
+    font-size: 13px;
+    color: #2c3e50;
+    padding: 6px 0;
+    border-bottom: 1px dotted #bdc3c7;
+}
+
+/* تذييل الصفحة الأسفل الموحد */
+.global-footer {
+    background-color: #333;
+    color: #aaa;
+    text-align: center;
+    padding: 10px;
+    font-size: 11px;
+    margin-top: auto;
+}
