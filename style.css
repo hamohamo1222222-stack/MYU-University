@@ -1,0 +1,2985 @@
+/* ==========================================
+   MYU STUDENT PORTAL
+   GLOBAL STYLES
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Tahoma, Arial, sans-serif;
+    background: #f8f8f8;
+    color: #555;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+
+/* ==========================================
+   TOP HEADER
+   ========================================== */
+
+.top-header {
+    width: 100%;
+    height: 36px;
+    background: #555555;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+}
+
+
+/* Left Header */
+
+.header-left {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 19px;
+    padding-left: 10px;
+}
+
+.profile-image {
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.header-icon {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+}
+
+.header-icon:hover {
+    color: #ff777b;
+}
+
+.language-button {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-family: Georgia, serif;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.language-button:hover {
+    color: #ff777b;
+}
+
+
+/* Center Date */
+
+.header-date {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    font-size: 8px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+/* Right Header */
+
+.header-right {
+    height: 100%;
+    width: 150px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-logo {
+    width: 105px;
+    height: 34px;
+    object-fit: contain;
+}
+
+
+/* ==========================================
+   DASHBOARD CONTAINER
+   ========================================== */
+
+.dashboard-container {
+    width: 100%;
+    min-height: calc(100vh - 71px);
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ==========================================
+   SERVICES NAVIGATION
+   ========================================== */
+
+.services-navigation {
+    width: 100%;
+    background: #ffffff;
+    padding-top: 22px;
+    padding-bottom: 26px;
+}
+
+
+/* Services Rows */
+
+.services-row {
+    display: grid;
+    gap: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    direction: rtl;
+}
+
+.services-row-first {
+    width: min(1404px, calc(100% - 40px));
+    grid-template-columns: repeat(9, minmax(0, 1fr));
+}
+
+.services-row-second {
+    width: min(778px, calc(100% - 40px));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    margin-top: 4px;
+}
+
+
+/* Individual Service Card */
+
+.service-card {
+    height: 77px;
+    background: #dedede;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #777777;
+    text-decoration: none;
+    transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+    overflow: hidden;
+}
+
+
+/* Service Icons */
+
+.service-card > i {
+    font-size: 35px;
+    color: #ff777b;
+    line-height: 1;
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.service-card > i {
+    color: #ff777b;
+}
+
+.service-card span {
+    font-size: 10px;
+    color: #777777;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.service-card:hover {
+    background: #e9e9e9;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.service-card:hover > i {
+    transform: scale(1.08);
+}
+
+
+/* ==========================================
+   MAIN CONTENT
+   ========================================== */
+
+.main-content {
+    flex: 1;
+    width: 100%;
+    background: #f8f8f8;
+    min-height: 400px;
+}
+
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+
+.dashboard-footer {
+    width: 100%;
+    height: 35px;
+    background: #555555;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    z-index: 100;
+}
+
+.dashboard-footer a {
+    color: #ffffff;
+    font-size: 8px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: opacity 0.2s ease;
+}
+
+.dashboard-footer a:hover {
+    opacity: 0.7;
+}
+
+body[dir="ltr"] .services-row {
+    direction: ltr;
+}
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 1100px) {
+    .services-row-first {
+        width: calc(100% - 24px);
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+    .services-row-second {
+        width: calc(100% - 24px);
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+    .service-card {
+        height: 80px;
+    }
+    .header-left {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .top-header {
+        height: 42px;
+    }
+    .header-left {
+        gap: 10px;
+        padding-left: 7px;
+    }
+    .profile-image {
+        width: 27px;
+        height: 27px;
+    }
+    .header-icon {
+        font-size: 11px;
+    }
+    .language-button {
+        font-size: 14px;
+    }
+    .header-right {
+        width: 95px;
+    }
+    .header-logo {
+        width: 85px;
+    }
+    .header-date {
+        display: none;
+    }
+    .services-navigation {
+        padding-top: 15px;
+        padding-bottom: 20px;
+    }
+    .services-row-first,
+    .services-row-second {
+        width: calc(100% - 16px);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 5px;
+    }
+    .services-row-second {
+        margin-top: 5px;
+    }
+    .service-card {
+        height: 82px;
+        gap: 8px;
+    }
+    .service-card > i {
+        font-size: 29px;
+    }
+    .service-card span {
+        font-size: 9px;
+    }
+    .dashboard-footer {
+        height: 34px;
+        gap: 12px;
+    }
+    .dashboard-footer a {
+        font-size: 7px;
+    }
+}
+
+/* ==========================================
+   PERSONAL DATA PAGE
+   ========================================== */
+
+.inner-page {
+    background: #f8f8f8;
+    overflow-x: hidden;
+}
+
+/* Layout - Flexbox direction updates automatically via dir attribute */
+.portal-layout {
+    display: flex;
+    flex-direction: row;
+}
+
+.personal-content {
+    flex: 1;
+    min-width: 0;
+    padding: 15px 12px 45px;
+    background: #f8f8f8;
+}
+
+.page-title {
+    font-size: 15px;
+    font-weight: normal;
+    color: #555;
+    margin: 0 0 12px;
+}
+
+/* Data Panels */
+.data-panel {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 17px;
+    overflow: hidden;
+}
+
+.panel-heading {
+    height: 36px;
+    background: #dedede;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+    color: #555;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.panel-body {
+    min-height: 130px;
+    padding: 17px 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.data-columns {
+    width: 58%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.data-column {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.data-item {
+    display: grid;
+    grid-template-columns: 115px minmax(0, 1fr);
+    align-items: start;
+    gap: 8px;
+    min-height: 15px;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.data-item span {
+    color: #315477;
+    text-decoration: underline;
+}
+
+.data-item strong {
+    color: #555;
+    font-weight: normal;
+    overflow-wrap: anywhere;
+}
+
+/* Sidebar */
+.portal-sidebar {
+    width: 154px;
+    min-width: 154px;
+    background: #555658;
+    color: white;
+    min-height: calc(100vh - 75px);
+    transition: transform 0.3s ease;
+    z-index: 20;
+}
+
+.sidebar-profile {
+    min-height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 5px;
+    text-align: center;
+}
+
+.sidebar-profile img {
+    width: 67px;
+    height: 87px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #777;
+    margin-bottom: 8px;
+}
+
+.sidebar-profile h3 {
+    color: #ff777b;
+    font-size: 12px;
+    margin: 0 0 6px;
+}
+
+.sidebar-profile p,
+.sidebar-profile small {
+    color: #ff777b;
+    font-size: 9px;
+    margin: 2px 0;
+}
+
+/* Sidebar Navigation */
+.sidebar-navigation {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-link {
+    min-height: 29px;
+    padding: 5px 9px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #ddd;
+    text-decoration: none;
+    font-size: 10px;
+    transition: background 0.2s ease;
+    position: relative;
+}
+
+.sidebar-link > i:first-child {
+    width: 14px;
+    text-align: center;
+    font-size: 11px;
+}
+
+.sidebar-link:hover {
+    background: #697b75;
+    color: #fff;
+}
+
+.sidebar-link.active {
+    background: #7b8e86;
+    color: #fff;
+}
+
+.sidebar-arrow {
+    margin-right: auto;
+    font-size: 10px;
+}
+/* Header modifications */
+.inner-page .header-right {
+    width: 154px;
+    min-width: 154px;
+    height: 39px;
+}
+
+.inner-page .header-logo {
+    width: 115px;
+    height: 37px;
+    object-fit: contain;
+}
+
+.inner-page .sidebar-toggle {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    position: absolute;
+    inset-inline-end: 154px; 
+    height: 100%;
+    width: 36px;
+}
+
+/* Footer */
+.inner-page .dashboard-footer {
+    z-index: 30;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .portal-sidebar {
+        position: fixed;
+        inset-inline-end: 0;
+        top: 39px;
+        bottom: 0;
+        height: calc(100vh - 39px);
+        overflow-y: auto;
+        transform: translateX(100%);
+    }
+
+    body[dir="ltr"] .portal-sidebar {
+        transform: translateX(-100%);
+    }
+
+    .portal-sidebar.open {
+        transform: translateX(0) !important;
+    }
+
+    .inner-page .sidebar-toggle {
+        inset-inline-end: 154px;
+    }
+
+    .personal-content {
+        width: 100%;
+    }
+
+    .data-columns {
+        width: 85%;
+    }
+}
+
+@media (max-width: 600px) {
+    .personal-content {
+        padding: 12px 8px 45px;
+    }
+
+    .data-columns {
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .data-item {
+        grid-template-columns: 1fr;
+        gap: 2px;
+        margin-bottom: 5px;
+        font-size: 10px;
+    }
+
+    .panel-body {
+        padding: 12px 8px;
+    }
+
+    .inner-page .header-right {
+        width: 95px;
+        min-width: 95px;
+    }
+
+    .inner-page .sidebar-toggle {
+        inset-inline-end: 95px;
+    }
+
+    .sidebar-profile {
+        min-height: 155px;
+    }
+}
+
+/* ==========================================
+   ACADEMIC RESULTS PAGE
+   ========================================== */
+
+.results-content {
+    padding-bottom: 65px;
+}
+
+/* Results filter */
+.results-filter-panel {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 18px;
+    overflow: hidden;
+}
+
+.results-filter-heading {
+    min-height: 36px;
+    background: #dedede;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+    color: #555;
+    font-size: 12px;
+}
+
+.results-filter-body {
+    min-height: 75px;
+    padding: 15px 18px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    font-size: 11px;
+}
+
+.results-filter-body label {
+    color: #315477;
+}
+
+.results-filter-body select {
+    width: 260px;
+    max-width: 100%;
+    height: 34px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 0 10px;
+    background: #fff;
+    color: #555;
+    font-family: inherit;
+    font-size: 11px;
+    outline: none;
+}
+
+.results-filter-body select:focus {
+    border-color: #7b8e86;
+}
+
+/* Semester card */
+.semester-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 18px;
+    overflow: hidden;
+    animation: resultsFadeIn .45s ease both;
+}
+
+.semester-heading {
+    min-height: 40px;
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: #dedede;
+    border-bottom: 1px solid #ccc;
+    color: #555;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.semester-heading i {
+    margin-inline-start: 6px;
+    color: #ff777b;
+}
+
+.semester-status {
+    font-size: 10px;
+    font-weight: normal;
+    color: #777;
+}
+
+/* Results table */
+.results-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 550px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.results-table th {
+    background: #f2f2f2;
+    color: #555;
+    font-weight: bold;
+    padding: 12px 9px;
+    border: 1px solid #e1e1e1;
+    white-space: nowrap;
+}
+
+.results-table td {
+    padding: 12px 9px;
+    border: 1px solid #e5e5e5;
+    color: #666;
+}
+
+.results-table tbody tr {
+    transition: background .2s ease;
+}
+
+.results-table tbody tr:hover {
+    background: #fafafa;
+}
+
+.results-table td:first-child {
+    color: #315477;
+    font-weight: bold;
+}
+
+.grade-value {
+    display: inline-block;
+    min-width: 34px;
+    padding: 4px 8px;
+    border-radius: 3px;
+    background: #e8eee9;
+    color: #536f5d;
+    font-weight: bold;
+}
+
+/* Semester summary */
+.semester-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 14px;
+    background: #fafafa;
+    border-top: 1px solid #e5e5e5;
+}
+
+.summary-item {
+    text-align: center;
+    padding: 10px 5px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+}
+
+.summary-item span {
+    display: block;
+    color: #888;
+    font-size: 10px;
+    margin-bottom: 7px;
+}
+
+.summary-item strong {
+    color: #315477;
+    font-size: 14px;
+}
+
+/* Empty results */
+.results-empty {
+    min-height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    color: #888;
+    font-size: 12px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.results-empty i {
+    color: #ff777b;
+    font-size: 27px;
+}
+
+.results-loading {
+    padding: 35px;
+    text-align: center;
+    color: #777;
+    font-size: 12px;
+}
+
+.results-loading i {
+    margin-inline-start: 7px;
+}
+
+/* Animation */
+@keyframes resultsFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .results-content {
+        padding: 12px 8px 60px;
+    }
+    .results-filter-body {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .results-filter-body select {
+        width: 100%;
+    }
+    .semester-summary {
+        grid-template-columns: 1fr;
+        gap: 7px;
+    }
+    .summary-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+    .summary-item span {
+        margin: 0;
+    }
+}
+
+/* ==========================================
+   PURE DIRECTION AND DYNAMIC ALIGNMENT ENGINE
+   ========================================== */
+
+/* 🇸🇦 ARABIC SPECIFIC STYLES (RTL) */
+body[dir="rtl"] {
+    direction: rtl;
+}
+body[dir="rtl"] .page-title,
+body[dir="rtl"] .panel-heading,
+body[dir="rtl"] .data-item span,
+body[dir="rtl"] .data-item strong {
+    text-align: right;
+}
+body[dir="rtl"] .data-columns {
+    direction: rtl;
+}
+body[dir="rtl"] .sidebar-arrow {
+    margin-right: auto;
+    margin-left: 0;
+    transform: scaleX(1);
+}
+
+/* 🇬🇧 ENGLISH SPECIFIC STYLES (LTR) */
+body[dir="ltr"] {
+    direction: ltr;
+}
+body[dir="ltr"] .page-title,
+body[dir="ltr"] .panel-heading,
+body[dir="ltr"] .data-item span,
+body[dir="ltr"] .data-item strong {
+    text-align: left;
+}
+body[dir="ltr"] .panel-heading {
+    justify-content: flex-start;
+}
+body[dir="ltr"] .data-columns {
+    direction: ltr;
+}
+body[dir="ltr"] .results-filter-body select {
+    text-align: left;
+}
+body[dir="ltr"] .sidebar-arrow {
+    margin-left: auto;
+    margin-right: 0;
+    transform: scaleX(-1); /* يعكس السهم الصغير في الروابط ليناسب الإنجليزي */
+}
+/* ==========================================================================
+   UNIVERSITY OFFICIAL RESULTS STYLE ENGINE - CLEAN & OPTIMIZED v3 (PART 1)
+   ========================================================================== */
+
+/* الحاوية الأساسية للفصول الدراسية */
+.uni-accordion-item {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0px; /* النظام الأصلي حواف حادة تماماً */
+    margin-bottom: 8px;
+    width: 100%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.01);
+}
+
+/* شريط عنوان الفصل الدراسي - مطابق للأصل */
+.uni-accordion-header {
+    background-color: #f1f5f9 !important; /* لون رمادي ناعم جداً مطابق للأصل */
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    list-style: none;
+    border-bottom: 1px solid #cbd5e1;
+}
+
+.uni-accordion-header::-webkit-details-marker {
+    display: none; /* إخفاء سهم المتصفح الافتراضي */
+}
+
+/* عنوان الفصل الدراسي الداخلي */
+.uni-accordion-title {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #334155;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+/* سهم القائمة الصغير وتدويره التلقائي */
+.font-arrow {
+    font-size: 10px;
+    color: #64748b;
+    transition: transform 0.15s ease;
+}
+
+.uni-accordion-item[open] .font-arrow {
+    transform: rotate(0deg);
+}
+
+.uni-accordion-item:not([open]) .font-arrow {
+    transform: rotate(-90deg);
+}
+
+body[dir="ltr"] .uni-accordion-item:not([open]) .font-arrow {
+    transform: rotate(95deg);
+}
+
+.uni-accordion-content-inner {
+    background: #ffffff;
+    padding: 0;
+}
+/* ==========================================================================
+   UNIVERSITY OFFICIAL RESULTS STYLE ENGINE - (PART 2: TABLES)
+   ========================================================================== */
+
+/* غلاف الجدول لضمان مرونة العرض على الأجهزة */
+.results-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* تنسيق الجدول المسطح النظيف */
+.uni-portal-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+    color: #334155;
+    background: #ffffff;
+}
+
+/* ترويسة الجدول الرمادية الفاتحة والشفافة */
+.uni-portal-table th {
+    background-color: #f8fafc;
+    color: #475569;
+    font-weight: 600;
+    padding: 6px 10px; /* مسافات داخلية صغيرة ومطابقة تماماً للأصل */
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 11px;
+}
+
+/* خلايا الجدول الشفافة كلياً مع خطوط أفقية رفيعة للغاية */
+.uni-portal-table td {
+    padding: 7px 10px;
+    border-bottom: 1px solid #f1f5f9;
+    background: transparent;
+    text-align: center;
+}
+
+/* تظليل خفيف جداً عند مرور الماوس فوق الصف */
+.uni-portal-table tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+/* إرجاع اللون الطبيعي لكود المادة دون تمييز مفرط */
+.uni-portal-table td:first-child {
+    color: #334155;
+    font-weight: normal;
+}
+
+/* محاذاة اسم المقرر الدراسي لليسار */
+.text-start-align {
+    text-align: start !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+/* نصوص التقديرات البسيطة والمسطحة بدون خلفيات ملونة ضخمة */
+.uni-grade-text {
+    font-weight: 500;
+    color: #1e293b;
+}
+/* ==========================================================================
+   UNIVERSITY OFFICIAL RESULTS STYLE ENGINE - (PART 3: SUMMARY & ALERTS)
+   ========================================================================== */
+
+/* شريط الملخص السفلي الممتد كسطر واحد مطابق لجدول الجامعة الحقيقي */
+.uni-semester-strip-summary {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
+    padding: 6px 12px;
+    background-color: #f8fafc; /* نفس خلفية رؤوس الجداول الرمادية الفاتحة */
+    border-top: 1px solid #e2e8f0;
+    width: 100%;
+}
+
+/* تنسيق عناصر شريط المعدلات والساعات */
+.strip-item {
+    display: flex;
+    align-items: center;
+    padding: 2px 14px;
+    font-size: 10.5px;
+    color: #475569;
+    position: relative;
+}
+
+/* الخطوط العمودية الرفيعة الفاصلة بين الحسابات */
+body[dir="rtl"] .strip-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background-color: #cbd5e1;
+}
+
+body[dir="ltr"] .strip-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background-color: #cbd5e1;
+}
+
+.strip-item span {
+    margin-inline-end: 4px;
+    color: #64748b;
+}
+
+.strip-item strong {
+    color: #0f172a;
+    font-weight: 500;
+}
+
+/* صندوق حجب النتيجة الوردي الممتد بشكل متناسق ومسطح */
+.uni-results-not-announced-box {
+    background-color: #fff1f2;
+    color: #e11d48;
+    border: 1px solid #fecdd3;
+    border-radius: 3px;
+    padding: 4px 12px;
+    font-size: 11px;
+    font-weight: 500;
+    width: fit-content;
+    margin: 12px auto;
+    text-align: center;
+}
+
+/* تنظيف وضبط رسائل الخطأ */
+.results-empty-alert {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 15px;
+    text-align: center;
+    color: #64748b;
+    font-size: 11px;
+}
+
+/* 📱 التوافق المرن مع الهواتف الذكية */
+@media (max-width: 768px) {
+    .uni-semester-strip-summary {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 4px;
+    }
+    
+    .strip-item {
+        width: 100%;
+        padding: 4px 6px;
+        justify-content: space-between;
+        border-bottom: 1px solid #f1f5f9;
+    }
+    
+    .strip-item:last-child {
+        border-bottom: none;
+    }
+    
+    .strip-item::after {
+        display: none !important;
+    }
+}
+
+/* =========================================
+   ACADEMIC REGISTRATION PAGE
+========================================= */
+
+.registration-content {
+    min-height: calc(100vh - 100px);
+}
+
+.registration-alert {
+    width: 100%;
+    min-height: 37px;
+    margin: 12px 0 0;
+    padding: 9px 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    background-color: #f8d7da;
+    border: 1px solid #f5c2c7;
+    border-radius: 2px;
+
+    color: #842029;
+    font-size: 13px;
+    font-weight: 500;
+
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.registration-alert i {
+    font-size: 13px;
+}
+
+.registration-logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.registration-page .registration-alert {
+    animation: registrationAlertFade 0.5s ease both;
+}
+
+@keyframes registrationAlertFade {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .registration-content {
+        min-height: calc(100vh - 100px);
+    }
+
+    .registration-alert {
+        font-size: 12px;
+        padding: 9px 10px;
+    }
+}
+
+/* =========================================
+   MILITARY EDUCATION PAGE
+========================================= */
+
+.military-content {
+    min-height: calc(100vh - 100px);
+}
+
+.military-alert {
+    width: 100%;
+    min-height: 37px;
+    margin: 12px 0 0;
+    padding: 9px 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #f8d7da;
+    border: 1px solid #f5c2c7;
+    border-radius: 2px;
+
+    color: #842029;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+.military-logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.military-page .military-alert {
+    animation: militaryAlertFade 0.5s ease both;
+}
+
+@keyframes militaryAlertFade {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .military-content {
+        min-height: calc(100vh - 100px);
+    }
+
+    .military-alert {
+        font-size: 12px;
+        padding: 9px 10px;
+    }
+}
+
+/* =========================================
+   STUDENT ID CARDS PAGE
+========================================= */
+
+.student-cards-content {
+    min-height: calc(100vh - 100px);
+}
+
+.student-cards-alert {
+    width: 100%;
+    min-height: 37px;
+    margin: 12px 0 0;
+    padding: 9px 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #f8d7da;
+    border: 1px solid #f5c2c7;
+    border-radius: 2px;
+
+    color: #842029;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+.student-cards-logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.student-cards-page .student-cards-alert {
+    animation: studentCardsFade 0.5s ease both;
+}
+
+@keyframes studentCardsFade {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .student-cards-content {
+        min-height: calc(100vh - 100px);
+    }
+
+    .student-cards-alert {
+        font-size: 12px;
+        padding: 9px 10px;
+    }
+}
+
+/* =========================================
+   STUDENT ID CARD DESIGN
+========================================= */
+
+.student-cards-content {
+    min-height: calc(100vh - 100px);
+}
+
+.student-card-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 22px 15px 40px;
+    box-sizing: border-box;
+}
+
+.student-id-card {
+    width: 100%;
+    max-width: 538px;
+    background: #fff;
+    border: 1px solid #d5d5d5;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.09);
+    animation: studentCardAppear 0.5s ease both;
+}
+
+/* CARD HEADER */
+
+.student-id-header {
+    min-height: 70px;
+    padding: 10px 20px;
+    background: #555557;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.student-id-logo {
+    width: 95px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.student-id-header h2 {
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* CARD BODY */
+
+.student-id-body {
+    min-height: 250px;
+    padding: 28px 28px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 28px;
+}
+
+.student-id-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.student-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0 0 7px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #ededed;
+    text-align: right;
+}
+
+.student-info-item:last-child {
+    margin-bottom: 0;
+}
+
+.student-info-item span {
+    color: #aaa;
+    font-size: 11px;
+}
+
+.student-info-item strong {
+    color: #222;
+    font-size: 13px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.student-id-photo {
+    width: 122px;
+    height: 146px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+}
+
+.student-id-photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* CARD FOOTER */
+
+.student-id-footer {
+    min-height: 38px;
+    padding: 10px;
+    background: #f1f1f1;
+    border-top: 1px solid #ddd;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #999;
+    font-size: 12px;
+}
+
+/* DOWNLOAD BUTTON */
+
+.download-student-card {
+    margin-top: 21px;
+    min-width: 112px;
+    padding: 10px 16px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    border: none;
+    border-radius: 4px;
+    background: #7d9992;
+    color: #fff;
+
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+
+    transition: background 0.25s ease,
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.download-student-card:hover {
+    background: #657f78;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.download-student-card:active {
+    transform: translateY(0);
+}
+
+/* ANIMATION */
+
+@keyframes studentCardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ENGLISH DIRECTION */
+
+body[dir="ltr"] .student-info-item {
+    text-align: left;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .student-card-wrapper {
+        padding: 18px 8px 30px;
+    }
+
+    .student-id-header {
+        min-height: 62px;
+        padding: 8px 14px;
+    }
+
+    .student-id-logo {
+        width: 78px;
+        height: 42px;
+    }
+
+    .student-id-header h2 {
+        font-size: 15px;
+    }
+
+    .student-id-body {
+        min-height: 220px;
+        padding: 20px 14px;
+        gap: 14px;
+    }
+
+    .student-id-photo {
+        width: 95px;
+        height: 125px;
+    }
+
+    .student-info-item strong {
+        font-size: 11px;
+    }
+
+    .student-info-item span {
+        font-size: 10px;
+    }
+}
+
+/* =====================================
+   INBOX PAGE
+===================================== */
+
+.inbox-content {
+    min-height: calc(100vh - 100px);
+}
+
+.inbox-panel {
+    width: 100%;
+    max-width: 315px;
+    margin: 10px 0 0 auto;
+    direction: rtl;
+}
+
+/* CREATE MESSAGE BUTTON */
+
+.inbox-compose-btn {
+    width: 100%;
+    height: 35px;
+    border: none;
+    background: #6c757d;
+    color: #fff;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.25s ease;
+}
+
+.inbox-compose-btn:hover {
+    background: #545b62;
+}
+
+/* INBOX TABS */
+
+.inbox-tabs {
+    margin-top: 12px;
+    border: 1px solid #d0c9bd;
+}
+
+.inbox-tab {
+    width: 100%;
+    min-height: 32px;
+    padding: 7px 9px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border: none;
+    border-bottom: 1px solid #d0c9bd;
+    background: #faf9f7;
+
+    color: #666;
+    font-family: inherit;
+    font-size: 12px;
+    text-align: right;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.inbox-tab:last-child {
+    border-bottom: none;
+}
+
+.inbox-tab:hover,
+.inbox-tab.active {
+    background: #efefef;
+    color: #333;
+}
+
+.inbox-tab i {
+    display: none;
+}
+
+/* MESSAGES */
+
+.messages-container {
+    margin-top: 12px;
+}
+
+.message-item {
+    padding: 13px;
+    margin-bottom: 8px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    cursor: pointer;
+    animation: inboxFade 0.3s ease both;
+    transition: box-shadow 0.2s ease;
+}
+
+.message-item:hover {
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.message-item h3 {
+    margin: 0 0 6px;
+    color: #444;
+    font-size: 13px;
+}
+
+.message-item p {
+    margin: 0;
+    color: #888;
+    font-size: 11px;
+}
+
+.message-date {
+    display: block;
+    margin-top: 8px;
+    color: #aaa;
+    font-size: 10px;
+}
+
+.empty-messages {
+    padding: 20px 10px;
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+    background: #fafafa;
+    border: 1px solid #ddd;
+}
+
+/* COMPOSE MODAL */
+
+.compose-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background: rgba(0,0,0,0.45);
+}
+
+.compose-overlay.show {
+    display: flex;
+}
+
+.compose-modal {
+    width: 100%;
+    max-width: 470px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+    animation: inboxFade 0.25s ease;
+}
+
+.compose-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.compose-header h2 {
+    margin: 0;
+    font-size: 17px;
+    color: #555;
+}
+
+.compose-close {
+    border: none;
+    background: transparent;
+    color: #777;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.compose-modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.compose-modal label {
+    font-size: 12px;
+    color: #555;
+}
+
+.compose-modal input,
+.compose-modal textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: none;
+    font-family: inherit;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+.compose-modal input:focus,
+.compose-modal textarea:focus {
+    border-color: #7d9992;
+}
+
+.compose-modal textarea {
+    resize: vertical;
+}
+
+.send-message-btn {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background: #7d9992;
+    color: white;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.send-message-btn:hover {
+    background: #657f78;
+}
+
+@keyframes inboxFade {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .inbox-panel {
+        max-width: 100%;
+    }
+
+    .compose-modal {
+        padding: 15px;
+    }
+}
+
+body[dir="ltr"] .inbox-panel {
+    margin-right: 0;
+    margin-left: auto;
+    direction: ltr;
+}
+
+body[dir="ltr"] .inbox-tab {
+    text-align: left;
+}
+
+/* =====================================
+   REGISTRATION FORM PAGE
+===================================== */
+
+.registration-content {
+    min-height: calc(100vh - 100px);
+}
+
+.registration-status-area {
+    width: 100%;
+    min-height: 420px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.registration-expired-alert {
+    width: 58%;
+    min-height: 47px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    position: relative;
+
+    padding: 10px 35px;
+    box-sizing: border-box;
+
+    background: #603635;
+    color: #fff;
+
+    border-radius: 12px;
+
+    font-size: 17px;
+    font-weight: 700;
+    text-align: center;
+
+    animation: registrationAlertAppear 0.45s ease both;
+}
+
+.registration-alert-close {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    border: none;
+    background: transparent;
+    color: #fff;
+
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1;
+
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.registration-alert-close:hover {
+    opacity: 0.65;
+}
+
+body[dir="ltr"] .registration-alert-close {
+    right: auto;
+    left: 12px;
+}
+
+@keyframes registrationAlertAppear {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .registration-status-area {
+        min-height: 320px;
+        padding: 15px;
+    }
+
+    .registration-expired-alert {
+        width: 90%;
+        font-size: 14px;
+        min-height: 45px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .registration-expired-alert {
+        width: 100%;
+        font-size: 13px;
+        padding: 10px 35px;
+    }
+
+}
+/* ================= GRIEVANCES PAGE ================= */
+
+.grievances-content {
+    padding: 25px 30px;
+}
+
+.grievances-content .page-title {
+    margin-bottom: 30px;
+}
+
+.grievance-form-section {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.grievance-field {
+    display: grid;
+    grid-template-columns: 150px 1fr 1fr;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.grievance-field label {
+    font-weight: 600;
+    color: #263b50;
+}
+
+.grievance-field select,
+.grievance-field textarea {
+    width: 100%;
+    padding: 11px 13px;
+    border: 1px solid #cbd9e8;
+    border-radius: 7px;
+    background: #fff;
+    color: #263b50;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.grievance-field select:focus,
+.grievance-field textarea:focus {
+    border-color: #2876ad;
+    box-shadow: 0 0 0 3px rgba(40, 118, 173, 0.10);
+}
+
+.grievance-notes-field {
+    align-items: start;
+}
+
+.grievance-field textarea {
+    grid-column: 2 / 4;
+    resize: vertical;
+    min-height: 105px;
+}
+
+.grievance-submit-wrapper {
+    text-align: center;
+    margin: 25px 0 40px;
+}
+
+.grievance-save-btn {
+    min-width: 110px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    background: #2876ad;
+    color: #fff;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+    transition: 0.25s ease;
+}
+
+.grievance-save-btn:hover {
+    background: #1d5e8c;
+    transform: translateY(-2px);
+}
+
+.grievance-save-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.grievance-message {
+    text-align: center;
+    margin: -25px 0 25px;
+    font-size: 14px;
+}
+
+.grievance-message.success {
+    color: #23834d;
+}
+
+.grievance-message.error {
+    color: #c0392b;
+}
+
+.grievance-requests-section {
+    max-width: 1050px;
+    margin: 35px auto 20px;
+}
+
+.grievance-requests-section h2 {
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+    color: #2876ad;
+    background: #f2f7fb;
+    border-bottom: 1px solid #dce7ef;
+    font-size: 20px;
+}
+
+.grievance-requests-list {
+    min-height: 85px;
+    padding: 15px;
+    border: 1px solid #cbd3dc;
+    border-radius: 0 0 9px 9px;
+    background: #fff;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.grievance-empty {
+    text-align: center;
+    color: #8996a3;
+    padding: 22px;
+}
+
+.grievance-request-card {
+    padding: 15px;
+    margin-bottom: 12px;
+    border: 1px solid #e1e7ed;
+    border-radius: 7px;
+    background: #fff;
+}
+
+.grievance-request-card:last-child {
+    margin-bottom: 0;
+}
+
+.grievance-request-card h3 {
+    margin: 0 0 10px;
+    color: #2876ad;
+    font-size: 16px;
+}
+
+.grievance-request-card p {
+    margin: 6px 0;
+    color: #596979;
+    font-size: 14px;
+}
+
+.grievance-request-status {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background: #fff2d8;
+    color: #946200;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .grievances-content {
+        padding: 20px 15px;
+    }
+
+    .grievance-field {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .grievance-field textarea {
+        grid-column: auto;
+    }
+
+    .grievance-submit-wrapper {
+        margin: 20px 0 30px;
+    }
+}
+
+body[dir="ltr"] .grievance-field {
+    direction: ltr;
+}
+
+
+/* =====================================
+   SIDEBAR DROPDOWN MENU
+===================================== */
+
+.sidebar-group {
+    width: 100%;
+}
+
+.sidebar-link.expandable-toggle {
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    cursor: pointer;
+    text-align: inherit;
+}
+
+.sidebar-submenu {
+    max-height: 0;
+    overflow: hidden;
+    background: #505254;
+    transition: max-height 0.3s ease;
+}
+
+.sidebar-group.open .sidebar-submenu {
+    max-height: 200px;
+}
+
+.sidebar-sublink {
+    display: block;
+    min-height: 29px;
+    padding: 7px 20px;
+    color: #ddd;
+    text-decoration: none;
+    font-size: 10px;
+    transition: background 0.2s ease;
+}
+
+.sidebar-sublink:hover,
+.sidebar-sublink.active {
+    background: #697b75;
+    color: #fff;
+}
+
+.sidebar-arrow {
+    transition: transform 0.3s ease;
+}
+
+.sidebar-group.open .sidebar-arrow {
+    transform: rotate(180deg);
+}
+
+body[dir="ltr"] .sidebar-sublink {
+    text-align: left;
+}
+/* ==========================================
+   COURSE WITHDRAWAL PAGE
+   ========================================== */
+
+.withdrawal-accordion-box {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+.withdrawal-bar-btn {
+    width: 100%;
+    min-height: 36px;
+    padding: 6px 14px;
+    background: #ffffff;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.2s ease;
+}
+
+.withdrawal-bar-btn:hover {
+    background: #f9fbfd;
+}
+
+.withdrawal-plus-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    background: #337ab7;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.withdrawal-bar-label {
+    font-size: 11.5px;
+    color: #666666;
+}
+
+.withdrawal-courses-panel {
+    display: none;
+    border-top: 1px solid #e2e8f0;
+    animation: withdrawalSlideDown 0.25s ease;
+}
+
+.withdrawal-courses-panel.open {
+    display: block;
+}
+
+@keyframes withdrawalSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn-withdraw-course {
+    padding: 5px 12px;
+    background: #d9534f;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 11px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.btn-withdraw-course:hover {
+    background: #c9302c;
+}
+
+.btn-withdraw-course:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+}
+
+.btn-cancel-withdrawal {
+    padding: 4px 10px;
+    background: #6c757d;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.btn-cancel-withdrawal:hover {
+    background: #5a6268;
+}
+
+.withdrawal-status-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+    border-radius: 3px;
+    font-size: 10.5px;
+}
+
+.withdrawal-alert-msg {
+    margin-top: 12px;
+    padding: 9px 14px;
+    border-radius: 3px;
+    font-size: 12px;
+    text-align: center;
+    display: none;
+}
+
+.withdrawal-alert-msg.success {
+    display: block;
+    background: #d1e7dd;
+    color: #0f5132;
+    border: 1px solid #badbcc;
+}
+
+.withdrawal-alert-msg.error {
+    display: block;
+    background: #f8d7da;
+    color: #842029;
+    border: 1px solid #f5c2c7;
+}
+/* ==========================================
+   FEES STATEMENT PAGE - EXACT SYSTEM MATCH
+   ========================================== */
+
+.fees-statement-sheet {
+    background: #ffffff;
+    border: 1px solid #d2d6de;
+    border-radius: 0;
+    padding: 10px 14px 20px;
+}
+
+.fees-print-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 4px;
+}
+
+.fees-print-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 9px;
+    background: #f5f5f5;
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+    color: #333333;
+    font-family: inherit;
+    font-size: 10.5px;
+    cursor: pointer;
+}
+
+.fees-print-btn:hover {
+    background: #e6e6e6;
+}
+
+.fees-sheet-header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 4px 8px 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.fees-uni-brand {
+    font-size: 11px;
+    font-weight: bold;
+    color: #444444;
+    text-align: start;
+}
+
+.fees-sheet-title {
+    font-size: 13px;
+    font-weight: bold;
+    color: #222222;
+    margin: 0;
+    text-align: center;
+}
+
+.fees-print-timestamp {
+    font-size: 9.5px;
+    color: #777777;
+    text-align: end;
+}
+
+.fees-student-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 40px;
+    padding: 10px 25px 14px;
+    font-size: 10.5px;
+}
+
+.meta-col {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.meta-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.meta-label {
+    color: #555555;
+    min-width: 70px;
+    font-weight: bold;
+}
+
+.meta-row strong {
+    color: #333333;
+    font-weight: normal;
+}
+
+/* جدول صحيفة الرسوم المطابق للأصل */
+.fees-sheet-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+    font-size: 10.5px;
+    text-align: center;
+    border: 1px solid #cccccc;
+}
+
+.fees-sheet-table thead th {
+    background: #e6e6e6;
+    color: #333333;
+    font-weight: bold;
+    padding: 6px 8px;
+    border: 1px solid #cccccc;
+}
+
+.fees-sheet-table td {
+    padding: 4px 8px;
+    border: 1px solid #d9d9d9;
+    color: #222222;
+}
+
+/* صف عنوان الفصل الدراسي داخل الجدول */
+.fees-semester-divider td {
+    background: #eeeeee;
+    color: #222222;
+    font-weight: bold;
+    text-align: start;
+    padding: 5px 10px;
+}
+
+/* الصفوف الخضراء المطابقة للصورة */
+.fees-row-paid {
+    background-color: #c3e6cb !important;
+}
+
+.fees-row-charge {
+    background-color: #ffffff;
+}
+
+.fees-total-row td {
+    background: #f2f2f2;
+    font-weight: bold;
+    color: #111111;
+    padding: 6px 8px;
+}
+
+@media (max-width: 650px) {
+    .fees-sheet-header {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 4px;
+    }
+    .fees-uni-brand, .fees-print-timestamp {
+        text-align: center;
+    }
+    .fees-student-meta {
+        grid-template-columns: 1fr;
+        padding: 8px 10px;
+    }
+}
+
+@media print {
+    .top-header, .portal-sidebar, .dashboard-footer, .no-print, .page-title {
+        display: none !important;
+    }
+    .portal-layout, .personal-content {
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+    }
+    .fees-statement-sheet {
+        border: none;
+    }
+}
+/* ==========================================
+   PAYMENT PERMISSION PAGE (إذن الدفع)
+   ========================================== */
+
+.payment-sheet-container {
+    background: #ffffff;
+    border: 1px solid #d2d6de;
+    padding: 12px 16px 25px;
+}
+
+.payment-top-bar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 4px;
+}
+
+.payment-sheet-header {
+    position: relative;
+    text-align: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.payment-center-title h2 {
+    font-size: 13px;
+    font-weight: bold;
+    color: #222222;
+    margin: 0 0 4px;
+}
+
+.payment-center-title p {
+    font-size: 11px;
+    color: #555555;
+    margin: 0;
+}
+
+.payment-timestamp {
+    font-size: 9.5px;
+    color: #777777;
+    text-align: end;
+    margin-top: 4px;
+}
+
+.payment-student-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 9px 14px;
+    background: #f9f9f9;
+    border: 1px solid #dddddd;
+    border-top: none;
+    font-size: 10.5px;
+}
+
+.p-strip-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.p-strip-item .p-label {
+    color: #555555;
+    font-weight: bold;
+}
+
+.p-strip-item strong {
+    color: #222222;
+    font-weight: normal;
+}
+
+/* جدول المقررات في إذن الدفع */
+.payment-courses-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 10.5px;
+    text-align: center;
+    border: 1px solid #cccccc;
+    border-top: none;
+}
+
+.payment-courses-table thead th {
+    background: #e6e6e6;
+    color: #333333;
+    font-weight: bold;
+    padding: 6px 10px;
+    border: 1px solid #cccccc;
+}
+
+.payment-courses-table td {
+    padding: 5px 10px;
+    border: 1px solid #e0e0e0;
+    color: #222222;
+}
+
+/* جدول الملخص المالي أسفل المقررات */
+.payment-summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 10.5px;
+    border: 1px solid #cccccc;
+    border-top: none;
+}
+
+.payment-summary-table td {
+    padding: 6px 12px;
+    border: 1px solid #e0e0e0;
+    color: #222222;
+}
+
+.payment-summary-table td.summary-label-cell {
+    width: 75%;
+    text-align: center;
+    font-weight: bold;
+    background: #fafafa;
+}
+
+.payment-summary-table td.summary-value-cell {
+    width: 15%;
+    text-align: end;
+    font-weight: 600;
+}
+
+.payment-summary-table td.summary-curr-cell {
+    width: 10%;
+    text-align: start;
+    color: #555555;
+}
+
+.payment-summary-table tr.summary-total-row td {
+    background: #eeeeee;
+    font-weight: bold;
+}
+
+@media (max-width: 650px) {
+    .payment-student-strip {
+        grid-template-columns: 1fr;
+    }
+}
+/* ==========================================
+   ELECTRONIC PLATFORM PAGE (المنصة الإلكترونية)
+   ========================================== */
+
+.platform-action-box {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #e2e2e2;
+    padding: 18px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-inline-start: 28%;
+}
+
+.platform-lms-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 190px;
+    height: 36px;
+    padding: 6px 24px;
+    background: #ffffff;
+    border: 1px solid #66afe9;
+    border-radius: 2px;
+    color: #5bc0de;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.platform-lms-btn:hover {
+    background: #f0f9fc;
+    border-color: #31b0d5;
+    color: #269abc;
+}
+
+@media (max-width: 768px) {
+    .platform-action-box {
+        padding-inline-start: 20px;
+        justify-content: center;
+    }
+}
+/* ==========================================
+   UPDATE PLATFORM PAGE (تحديث المنصة)
+   ========================================== */
+
+.platform-warning-banner {
+    width: 100%;
+    background-color: #fcf8e3;
+    border: 1px solid #faebcc;
+    color: #8a6d3b;
+    padding: 10px 16px;
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 14px;
+    border-radius: 2px;
+}
+
+.update-sync-btn {
+    cursor: pointer;
+    font-family: inherit;
+    min-width: 220px;
+}
+
+.update-sync-btn:disabled {
+    opacity: 0.65;
+    cursor: wait;
+}
+
+.platform-sync-result {
+    margin-top: 14px;
+    padding: 10px 16px;
+    border-radius: 2px;
+    font-size: 11.5px;
+    text-align: center;
+    display: none;
+}
+
+.platform-sync-result.success {
+    display: block;
+    background-color: #dff0d8;
+    border: 1px solid #d6e9c6;
+    color: #3c763d;
+}
+/* ==========================================
+   ABSENCE PAGE (الغياب)
+   ========================================== */
+
+.absence-sheet-container {
+    background: #ffffff;
+    border: 1px solid #d2d6de;
+    padding: 12px 16px 25px;
+}
+
+.absence-sheet-header {
+    text-align: center;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.absence-sheet-header h2 {
+    font-size: 13px;
+    font-weight: bold;
+    color: #222222;
+    margin: 0 0 4px;
+}
+
+.absence-portal-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+    font-size: 10.5px;
+    text-align: center;
+    border: 1px solid #cccccc;
+    border-top: none;
+}
+
+.absence-portal-table thead th {
+    background: #e6e6e6;
+    color: #333333;
+    font-weight: bold;
+    padding: 6px 10px;
+    border: 1px solid #cccccc;
+}
+
+.absence-portal-table td {
+    padding: 5px 10px;
+    border: 1px solid #e0e0e0;
+    color: #222222;
+}
+
+.absence-portal-table tbody tr:nth-child(even) {
+    background: #fafafa;
+}
+
+.absence-warning-high {
+    color: #c9302c !important;
+    font-weight: bold;
+}
+/* ==========================================
+   STUDY SCHEDULE PAGE (الجدول الدراسي)
+   ========================================== */
+
+.schedule-top-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.schedule-top-header-row .page-title {
+    margin-bottom: 0;
+}
+
+.schedule-view-tabs {
+    display: inline-flex;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.sched-tab-btn {
+    padding: 5px 14px;
+    background: transparent;
+    border: none;
+    font-family: inherit;
+    font-size: 11px;
+    color: #555555;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sched-tab-btn.active {
+    background: #ffffff;
+    color: #222222;
+    font-weight: bold;
+    box-shadow: inset 0 -2px 0 #5bc0de;
+}
+
+.schedule-sheet-container {
+    background: #ffffff;
+    border: 1px solid #d2d6de;
+    padding: 12px 16px 24px;
+}
+
+.schedule-meta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 40px;
+    padding: 10px 20px 14px;
+    font-size: 10.5px;
+}
+
+.study-schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 720px;
+    font-size: 10.5px;
+    text-align: center;
+    border: 1px solid #cccccc;
+}
+
+.study-schedule-table thead th {
+    background: #e6e6e6;
+    color: #333333;
+    font-weight: bold;
+    padding: 7px 8px;
+    border: 1px solid #cccccc;
+}
+
+.study-schedule-table td {
+    padding: 6px 8px;
+    border: 1px solid #dddddd;
+    color: #222222;
+    vertical-align: middle;
+}
+
+.study-schedule-table td.sched-day-cell {
+    background: #f4f4f4;
+    font-weight: bold;
+    color: #333333;
+}
+
+.study-schedule-table td.sched-empty-day-cell {
+    height: 26px;
+    background: #fafafa;
+}
+
+.schedule-signatures-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 28px;
+    padding-top: 12px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #444444;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* الشكل الثاني (بطاقات الأيام) */
+.schedule-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.sched-day-card {
+    border: 1px solid #dcdcdc;
+    border-radius: 3px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.sched-day-card-header {
+    background: #555555;
+    color: #ffffff;
+    padding: 6px 12px;
+    font-size: 11.5px;
+    font-weight: bold;
+}
+
+.sched-slot-box {
+    padding: 8px 12px;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 10.5px;
+}
+
+.sched-slot-box:last-child {
+    border-bottom: none;
+}
+
+.sched-slot-time {
+    color: #337ab7;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.sched-slot-course {
+    font-weight: bold;
+    color: #222222;
+}
+
+.sched-slot-meta {
+    color: #666666;
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+@media (max-width: 650px) {
+    .schedule-meta-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ==========================================
+   EXAM SCHEDULE PAGE (جدول الامتحانات)
+   ========================================== */
+
+.exam-sheet-container {
+    background: #ffffff;
+    border: 1px solid #d2d6de;
+    padding: 12px 16px 24px;
+}
+
+.exam-student-strip {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 10px;
+    padding: 9px 14px;
+    margin-top: 8px;
+    background: #f9f9f9;
+    border: 1px solid #dddddd;
+    font-size: 10.5px;
+}
+
+.exam-schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 780px;
+    font-size: 10.5px;
+    text-align: center;
+    border: 1px solid #cccccc;
+    border-top: none;
+}
+
+.exam-schedule-table thead th {
+    background: #e6e6e6;
+    color: #333333;
+    font-weight: bold;
+    padding: 6px 8px;
+    border: 1px solid #cccccc;
+}
+
+.exam-schedule-table td {
+    padding: 6px 8px;
+    border: 1px solid #dddddd;
+    color: #222222;
+}
+
+.exam-schedule-table tbody tr:nth-child(even) {
+    background: #fafafa;
+}
+
+@media (max-width: 650px) {
+    .exam-student-strip {
+        grid-template-columns: 1fr;
+    }
+}

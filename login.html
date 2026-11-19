@@ -1,106 +1,144 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>بوابة الخدمات الطلابية - جامعة مايو</title>
+    <title>MYU - بوابة الخدمات الطلابية</title>
 
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="login.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- طبقة الخلفية -->
-    <div class="background"></div>
+    <main class="login-page">
 
-    <!-- صندوق تسجيل الدخول -->
-    <div class="login-container">
+        <!-- Login Card -->
+        <section class="login-card">
 
-        <!-- الشعار -->
-        <div class="logo-container">
-            <img src="images/MYU.PNG" alt="MYU Logo">
-        </div>
-
-        <!-- العنوان -->
-        <h1>بوابة الخدمات الطلابية</h1>
-
-        <p class="subtitle">
-            نظام ابن الهيثم - جامعة مايو
-        </p>
-
-        <!-- نموذج الدخول -->
-        <form id="loginForm">
-
-            <!-- اسم المستخدم -->
-            <div class="input-group">
-                <span class="icon">👤</span>
-
-                <input
-                    type="text"
-                    id="username"
-                    placeholder="اسم المستخدم"
-                    autocomplete="username"
-                >
+            <!-- University Logo -->
+            <div class="logo-container">
+                <img src="images/MYU.PNG"
+                     alt="MYU University Logo"
+                     class="university-logo">
             </div>
 
-            <!-- كلمة المرور -->
-            <div class="input-group">
-                <span class="icon">🔒</span>
-
-                <input
-                    type="password"
-                    id="password"
-                    placeholder="كلمة المرور"
-                    autocomplete="current-password"
-                >
+            <!-- Page Title -->
+            <div class="login-heading">
+                <h1 data-i18n="portalTitle">بوابة الخدمات الطلابية</h1>
+                <p data-i18n="systemName">نظام ابن الهيثم - جامعة مايو</p>
             </div>
 
-            <!-- تذكرني -->
-            <div class="remember-row">
+            <!-- Login Form -->
+            <form id="loginForm">
 
-                <label>
-                    <input type="checkbox" id="remember">
-                    تذكرني
-                </label>
+                <!-- Username -->
+                <div class="input-group">
 
-                <span class="close-x">×</span>
+                    <span class="input-icon">
+                        <i class="fa-solid fa-user"></i>
+                    </span>
 
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="اسم المستخدم"
+                        data-placeholder="username"
+                        autocomplete="username"
+                        required
+                    >
+
+                </div>
+
+                <!-- Password -->
+                <div class="input-group">
+
+                    <span class="input-icon">
+                        <i class="fa-solid fa-lock"></i>
+                    </span>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="كلمة المرور"
+                        data-placeholder="password"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                </div>
+
+                <!-- Remember Me -->
+                <div class="remember-row">
+
+                    <label class="remember-label" for="rememberMe">
+                        <span data-i18n="remember">تذكرني</span>
+
+                        <input type="checkbox" id="rememberMe">
+                        <span class="custom-checkbox"></span>
+                    </label>
+
+                </div>
+
+                <!-- Login Button -->
+                <button type="submit" class="login-button">
+
+                    <i class="fa-solid fa-key"></i>
+
+                    <span data-i18n="login">تسجيل الدخول</span>
+
+                </button>
+
+                <!-- Login Message -->
+                <div id="loginMessage" class="login-message"></div>
+
+            </form>
+
+            <!-- Forgot Password -->
+            <div class="forgot-password">
+                <a href="#" id="forgotPassword"
+                   data-i18n="forgotPassword">
+                    نسيت كلمة المرور
+                </a>
             </div>
 
-            <!-- زر الدخول -->
-            <button type="submit" class="login-button">
-                🔑
-            </button>
+            <!-- Language Switch -->
+            <div class="language-switch">
+                <button type="button" id="languageToggle">
+                    English
+                </button>
+            </div>
 
-            <!-- نسيت كلمة المرور -->
-            <a href="#" class="forgot-password">
-                نسيت كلمة المرور
-            </a>
+        </section>
 
-        </form>
+        
+    </main>
 
-        <!-- English -->
-        <a href="#" class="english">
-            English
+    <!-- Footer -->
+    
+
+    <footer class="page-footer">
+
+        <a href="#" data-i18n="privacy">
+            <i class="fa-solid fa-shield-halved"></i>
+            سياسة الخصوصية
         </a>
 
-    </div>
+        <a >
+            
+           جميع الحقوق محفوظة © مركز إنتاج نظم تكنولوجيا المعلومات والاتصالات
+        </a>
 
-    <!-- النص أسفل الصندوق -->
-    <div class="system-info">
-        جميع الحقوق محفوظة © مركز إدارة نظم المعلومات والبرامج
-        <br>
-        2020
-    </div>
+        
 
-    <!-- الشريط السفلي -->
-    <footer>
-        <span>⚙</span>
-        سياسة الخصوصية وتأمين البيانات
     </footer>
 
-    <script src="js/login.js"></script>
+    <script src="app.js"></script>
 
 </body>
 </html>

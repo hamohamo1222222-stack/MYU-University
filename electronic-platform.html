@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>التسجيل الأكاديمي | MYU</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="inner-page registration-page">
+
+    <!-- TOP HEADER -->
+    <header class="top-header">
+
+        <div class="header-left">
+
+            <img src="images/profile.jpg"
+                 alt="Profile"
+                 class="profile-image">
+
+            <button class="header-icon" id="logoutButton" title="تسجيل الخروج">
+                <i class="fa-solid fa-power-off"></i>
+            </button>
+
+            <button class="header-icon" id="passwordBtn" title="كلمة المرور">
+                <i class="fa-solid fa-key"></i>
+            </button>
+
+            <button class="header-icon" id="settingsBtn" title="الإعدادات">
+                <i class="fa-solid fa-gears"></i>
+            </button>
+
+            <button class="language-button" id="languageToggle">En</button>
+
+        </div>
+
+        <div class="header-date" id="currentDate"></div>
+
+        <button class="sidebar-toggle" id="sidebarToggle">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="header-right">
+            <a href="dashboard.html"
+               class="registration-logo-link">
+                <img src="images/MYU.PNG"
+                     alt="MYU Logo"
+                     class="header-logo">
+            </a>
+        </div>
+
+    </header>
+
+    <!-- Portal Layout -->
+    <div class="portal-layout">
+        <!-- Main Content -->
+        <main class="personal-content platform-content">
+            <h1 class="page-title" data-i18n="electronicPlatform">المنصة الإلكترونية</h1>
+
+            <!-- الشريط الأبيض وزر المنصة التعليمية المطابق للصورة -->
+            <div class="platform-action-box">
+                <a href="pages/platform.html"
+                   id="openLmsBtn"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="platform-lms-btn"
+                   data-i18n="educationalPlatformBtn">المنصة التعليمية</a>
+            </div>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="portal-sidebar" id="portalSidebar">
+
+            <div class="sidebar-profile">
+
+                <img src="images/profile.jpg" alt="Student">
+
+                <h3 id="sidebarStudentName">أحمد محمد</h3>
+
+                <p data-i18n="universityName">جامعة مايو</p>
+
+                <small data-i18n="studentRole">طالب بالجامعة</small>
+
+            </div>
+
+
+            <nav class="sidebar-navigation">
+
+                <a href="personal-data.html" class="sidebar-link">
+                    <i class="fa-regular fa-address-card"></i>
+                    <span data-i18n="personalData">البيانات الشخصية</span>
+                </a>
+
+                <a href="results.html" class="sidebar-link">
+                    <i class="fa-solid fa-list"></i>
+                    <span data-i18n="academicResults">النتائج الدراسية</span>
+                </a>
+
+                <a href="registration.html" class="sidebar-link">
+                    <i class="fa-solid fa-file-pen"></i>
+                    <span data-i18n="academicRegistration">التسجيل الأكاديمي</span>
+                </a>
+
+                <a href="military.html" class="sidebar-link">
+                    <i class="fa-solid fa-user-shield"></i>
+                    <span data-i18n="militaryEducation">التربية العسكرية</span>
+                </a>
+
+                <a href="student-cards.html" class="sidebar-link">
+                    <i class="fa-solid fa-id-card"></i>
+                    <span data-i18n="studentCards">البطاقات التعريفية</span>
+                </a>
+
+                <a href="estb.html" class="sidebar-link">
+                    <i class="fa-regular fa-circle-question"></i>
+                    <span data-i18n="survey">استبيان</span>
+                </a>
+
+                <a href="inbox.html" class="sidebar-link">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span data-i18n="inbox">صندوق البريد</span>
+                </a>
+
+                <a href="registration-form.html" class="sidebar-link">
+                    <i class="fa-regular fa-newspaper"></i>
+                    <span data-i18n="registrationForm">استمارة التسجيل</span>
+                </a>
+
+                <a href="grievances.html" class="sidebar-link">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    <span data-i18n="complaints">تظلمات</span>
+                </a>
+
+                <a href="withdrawal.html" class="sidebar-link">
+                    <i class="fa-regular fa-file-excel"></i>
+                    <span data-i18n="withdrawal">الانسحاب من مقرر</span>
+                </a>
+
+                <!-- الرسوم -->
+<div class="sidebar-group">
+    <button class="sidebar-link expandable-toggle" type="button" aria-expanded="false">
+        <i class="fa-solid fa-money-bill-wave"></i>
+        <span data-i18n="fees">الرسوم</span>
+        <i class="fa-solid fa-caret-down sidebar-arrow"></i>
+    </button>
+
+    <div class="sidebar-submenu">
+        <a href="fees.html" class="sidebar-sublink" data-i18n="feesPayment">
+            بيانات سداد الرسوم
+        </a>
+        <a href="payment-permission.html" class="sidebar-sublink" data-i18n="paymentPermission">
+            إذن الدفع
+        </a>
+    </div>
+</div>
+
+<!-- مقرراتي -->
+<div class="sidebar-group">
+    <button class="sidebar-link expandable-toggle" type="button" aria-expanded="false">
+        <i class="fa-solid fa-book-open"></i>
+        <span data-i18n="courses">مقرراتي</span>
+        <i class="fa-solid fa-caret-down sidebar-arrow"></i>
+    </button>
+
+    <div class="sidebar-submenu">
+        <a href="electronic-platform.html" class="sidebar-sublink" data-i18n="electronicPlatform">
+            المنصة الإلكترونية
+        </a>
+        <a href="update-platform.html" class="sidebar-sublink" data-i18n="updatePlatform">
+            تحديث المنصة
+        </a>
+    </div>
+</div>
+
+<!-- الحضور والغياب -->
+<div class="sidebar-group">
+    <button class="sidebar-link expandable-toggle" type="button" aria-expanded="false">
+        <i class="fa-solid fa-clipboard-check"></i>
+        <span data-i18n="attendance">الحضور والغياب</span>
+        <i class="fa-solid fa-caret-down sidebar-arrow"></i>
+    </button>
+
+    <div class="sidebar-submenu">
+        <a href="absence.html" class="sidebar-sublink" data-i18n="absence">
+            الغياب
+        </a>
+        <a href="https://credit.muc.edu.eg/portalRegisteration?item=QR_Attendance&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdHVkZW50X2lkIjo0NzAxLCJ1bml2ZXJzaXR5X2lkIjoiMTY0OC4iLCJsYW5nIjoiYXIiLCJleHAiOjE3OTUwNTA1ODEsImlhdCI6MTc5NTA1MDI4MX0.12anqiOpFiaWRABpKKe_OeZbBCqj5VsjxKib04NC6CI"
+         class="sidebar-sublink" data-i18n="qrAttendance">
+            حضور QR code
+        </a>
+    </div>
+</div>
+
+<!-- الجداول -->
+<div class="sidebar-group">
+    <button class="sidebar-link expandable-toggle" type="button" aria-expanded="false">
+        <i class="fa-regular fa-calendar"></i>
+        <span data-i18n="schedule">الجداول</span>
+        <i class="fa-solid fa-caret-down sidebar-arrow"></i>
+    </button>
+
+    <div class="sidebar-submenu">
+        <a href="study-schedule.html" class="sidebar-sublink" data-i18n="studySchedule">
+            الجدول الدراسي
+        </a>
+        <a href="exam-schedule.html" class="sidebar-sublink" data-i18n="examSchedule">
+            جدول الامتحانات
+        </a>
+    </div>
+</div>
+
+            </nav>
+
+        </aside>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="dashboard-footer">
+
+        <a href="#">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span data-i18n="privacy">سياسة الخصوصية</span>
+        </a>
+
+        <a href="#">
+            <i class="fa-solid fa-file-lines"></i>
+            <span data-i18n="terms">الشروط والأحكام</span>
+        </a>
+
+        <a href="#">
+            <i class="fa-solid fa-circle-info"></i>
+            <span data-i18n="help">طلب دعم</span>
+        </a>
+
+    </footer>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
