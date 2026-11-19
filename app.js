@@ -2471,3 +2471,128 @@ document.addEventListener("DOMContentLoaded", function () {
         printBtn.addEventListener("click", () => window.print());
     }
 });
+/* ==========================================
+   DASHBOARD SUBMENU MODAL ENGINE
+   ========================================== */
+       
+
+
+const DASHBOARD_MODAL_MENUS = {
+    fees: {
+        titleAr: "الرسوم",
+        titleEn: "Fees",
+        items: [
+            {
+                labelAr: "بيانات سداد الرسوم",
+                labelEn: "Fees Payment Details",
+                icon: "fa-solid fa-money-bill-1-wave",
+                href: "fees.html"
+            },
+            {
+                labelAr: "إذن الدفع",
+                labelEn: "Payment Permission",
+                icon: "fa-solid fa-money-bill-transfer",
+                href: "payment-permission.html"
+            }
+        ]
+    },
+    courses: {
+        titleAr: "مقرراتي",
+        titleEn: "My Courses",
+        items: [
+            {
+                labelAr: "المنصة الإلكترونية",
+                labelEn: "Electronic Platform",
+                icon: "fa-solid fa-book-open-reader",
+                href: "electronic-platform.html"
+            },
+            {
+                labelAr: "تحديث المنصة",
+                labelEn: "Update Platform",
+                icon: "fa-solid fa-arrows-rotate",
+                href: "update-platform.html"
+            }
+        ]
+    },
+    attendance: {
+        titleAr: "الحضور والغياب",
+        titleEn: "Attendance",
+        items: [
+            {
+                labelAr: "الغياب",
+                labelEn: "Absence",
+                icon: "fa-solid fa-clipboard-user",
+                href: "absence.html"
+            },
+            {
+                labelAr: "حضور QR code",
+                labelEn: "QR Code Attendance",
+                icon: "fa-solid fa-qrcode",
+                href: "qr-attendance.html"
+            }
+        ]
+    },
+    schedule: {
+        titleAr: "الجداول",
+        titleEn: "Schedules",
+        items: [
+            {
+                labelAr: "الجدول الدراسي",
+                labelEn: "Study Schedule",
+                icon: "fa-solid fa-calendar-days",
+                href: "study-schedule.html"
+            },
+            {
+                labelAr: "جدول الامتحانات",
+                labelEn: "Exam Schedule",
+                icon: "fa-solid fa-file-pen",
+                href: "exam-schedule.html"
+            }
+        ]
+    }
+};
+
+document.addEventListener("DOMContentLoaded", function () {
+    const overlay = document.getElementById("dashboardSubModal");
+    const titleEl = document.getElementById("dashModalTitle");
+    const itemsEl = document.getElementById("dashModalItems");
+
+    if (!overlay || !titleEl || !itemsEl) return;
+
+    document.querySelectorAll(".modal-trigger-card").forEach(btn => {
+        btn.addEventListener("click", function () {
+            const groupKey = this.dataset.modalGroup;
+            const groupData = DASHBOARD_MODAL_MENUS[groupKey];
+            if (!groupData) return;
+
+            const isAr = currentLanguage === "ar";
+            titleEl.textContent = isAr ? groupData.titleAr : groupData.titleEn;
+
+            itemsEl.innerHTML = groupData.items.map(item => `
+                <a href="${item.href}" class="dash-modal-item">
+                    <i class="${item.icon}"></i>
+                    <span>${isAr ? item.labelAr : item.labelEn}</span>
+                </a>
+            `).join("");
+
+            overlay.classList.add("open");
+            overlay.setAttribute("aria-hidden", "false");
+        });
+    });
+
+    // إغلاق النافذة عند الضغط في أي مكان خارج المربع
+    overlay.addEventListener("click", function (e) {
+        if (e.target === overlay) {
+            overlay.classList.remove("open");
+            overlay.setAttribute("aria-hidden", "true");
+        }
+    });
+
+    // إغلاق النافذة بزر Escape
+    document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && overlay.classList.contains("open")) {
+            overlay.classList.remove("open");
+            overlay.setAttribute("aria-hidden", "true");
+        }
+    });
+});

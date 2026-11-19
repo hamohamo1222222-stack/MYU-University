@@ -2983,3 +2983,89 @@ body[dir="ltr"] .sidebar-sublink {
         grid-template-columns: 1fr;
     }
 }
+/* ==========================================
+   DASHBOARD SUBMENU MODAL (النافذة المنبثقة)
+   ========================================== */
+
+.modal-trigger-card {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.dash-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 15px;
+}
+
+.dash-modal-overlay.open {
+    display: flex;
+    animation: modalFadeIn 0.2s ease;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.dash-modal-box {
+    width: 100%;
+    max-width: 310px;
+    background: #ffffff;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.dash-modal-header {
+    background: #ff777b;
+    color: #ffffff;
+    text-align: center;
+    padding: 8px 14px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.dash-modal-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #ffffff;
+}
+
+.dash-modal-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 22px 12px;
+    text-decoration: none;
+    color: #555555;
+    border-inline-end: 1px solid #eeeeee;
+    transition: background 0.2s ease;
+    text-align: center;
+}
+
+.dash-modal-item:last-child {
+    border-inline-end: none;
+}
+
+.dash-modal-item:hover {
+    background: #f9f9f9;
+}
+
+.dash-modal-item i {
+    font-size: 28px;
+    color: #ff777b;
+}
+
+.dash-modal-item span {
+    font-size: 11px;
+    color: #555555;
+    line-height: 1.4;
+}
